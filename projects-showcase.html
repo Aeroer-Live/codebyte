@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Projects - CodingLog</title>
+    <title>All Projects - CodingLog | Developer Project Documentation</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="alternate icon" href="favicon.svg">
     <link rel="stylesheet" href="styles.css">
@@ -23,8 +23,9 @@
                     <span class="code-bracket">[</span>
                 </h1>
                 <p class="showcase-description">
-                    Explore all my developer projects. Each project includes detailed documentation, 
-                    technical breakdowns, and lessons learned.
+                    A comprehensive collection of my development projects, each thoroughly documented with technical breakdowns, 
+                    architecture decisions, code explanations, and lessons learned. Explore real-world implementations 
+                    from a developer's perspective.
                 </p>
             </div>
         </section>
@@ -55,7 +56,18 @@
             
             if (!showcaseGrid) return;
 
+            // Check if projects array exists
+            if (typeof projects === 'undefined' || !Array.isArray(projects)) {
+                showcaseGrid.innerHTML = '<p style="text-align: center; color: var(--text-secondary); padding: 2rem;">No projects available.</p>';
+                return;
+            }
+
             // Render all projects
+            if (projects.length === 0) {
+                showcaseGrid.innerHTML = '<p style="text-align: center; color: var(--text-secondary); padding: 2rem;">No projects to display yet.</p>';
+                return;
+            }
+
             showcaseGrid.innerHTML = projects.map(project => {
                 // Format date
                 const date = new Date(project.date);
@@ -85,10 +97,17 @@
         }
 
         // Initialize showcase page
-        if (window.location.pathname.includes('projects-showcase.html')) {
-            document.addEventListener('DOMContentLoaded', function() {
+        function initShowcase() {
+            if (document.getElementById('showcaseGrid')) {
                 renderShowcase();
-            });
+            }
+        }
+
+        // Run initialization when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initShowcase);
+        } else {
+            initShowcase();
         }
     </script>
 </body>
