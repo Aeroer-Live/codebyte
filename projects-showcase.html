@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Projects - CodingLog</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header" id="dynamic-header">
+        <!-- Header will be dynamically loaded -->
+    </header>
+
+    <main class="main">
+        <section class="showcase-hero">
+            <div class="container">
+                <h1 class="showcase-title">
+                    <span class="code-keyword">const</span> 
+                    <span class="code-variable">allProjects</span> 
+                    <span class="code-operator">=</span> 
+                    <span class="code-bracket">[</span>
+                </h1>
+                <p class="showcase-description">
+                    Explore all my developer projects. Each project includes detailed documentation, 
+                    technical breakdowns, and lessons learned.
+                </p>
+            </div>
+        </section>
+
+        <section class="showcase-section">
+            <div class="container">
+                <div class="showcase-grid" id="showcaseGrid">
+                    <!-- Projects will be dynamically loaded here -->
+                </div>
+
+                <div class="section-closer">
+                    <span class="code-bracket">];</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" id="dynamic-footer">
+        <!-- Footer will be dynamically loaded -->
+    </footer>
+
+    <script src="components.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Showcase page specific functionality
+        function renderShowcase() {
+            const showcaseGrid = document.getElementById('showcaseGrid');
+            
+            if (!showcaseGrid) return;
+
+            // Render all projects
+            showcaseGrid.innerHTML = projects.map(project => {
+                // Format date
+                const date = new Date(project.date);
+                const formattedDate = date.toLocaleDateString('en-US', { 
+                    year: 'numeric', 
+                    month: 'long', 
+                    day: 'numeric' 
+                });
+                
+                return `
+                <div class="showcase-card" onclick="navigateToProject('${project.id}')">
+                    <div class="showcase-card-header">
+                        <span class="showcase-card-category">${project.category}</span>
+                        <span class="showcase-card-date">${formattedDate}</span>
+                    </div>
+                    <h3 class="showcase-card-title">${project.title}</h3>
+                    <p class="showcase-card-description">${project.description}</p>
+                    <div class="showcase-card-tags">
+                        ${project.tags.map(tag => `<span class="project-tag">${tag}</span>`).join('')}
+                    </div>
+                    <div class="showcase-card-footer">
+                        <span class="showcase-card-link">View Details →</span>
+                    </div>
+                </div>
+            `;
+            }).join('');
+        }
+
+        // Initialize showcase page
+        if (window.location.pathname.includes('projects-showcase.html')) {
+            document.addEventListener('DOMContentLoaded', function() {
+                renderShowcase();
+            });
+        }
+    </script>
+</body>
+</html>
+

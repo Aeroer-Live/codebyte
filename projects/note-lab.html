@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Application - CodingLog</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header class="header" id="dynamic-header">
+        <!-- Header will be dynamically loaded -->
+    </header>
+
+    <main class="main">
+        <article class="project-article">
+            <div class="container">
+                <!-- Project Header -->
+                <header class="project-header">
+                    <div class="project-meta">
+                        <span class="project-category">Web App [ Secure Note-Taking Web App ]</span>
+                        <span class="project-date">August 04, 2025</span>
+                    </div>
+                    <h1 class="project-title">Note.Lab</h1>
+                    <p class="project-description">Note.Lab is a web-based note application designed specifically for developers who value privacy and data ownership.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">JavaScript</span>
+                        <span class="project-tag">HTML</span>
+                        <span class="project-tag">CSS</span>
+                    </div>
+                </header>
+
+                <!-- Project Content -->
+                <div class="project-content">
+                    <h2>Overview</h2>
+                    <p>Note.Lab is a cloud-based, developer-centric note-taking platform crafted to support technical workflows. Inspired by the clean and minimal aesthetics of GitHub, it offers a familiar environment where developers can focus on writing and organizing their ideas without distractions. With its powerful Markdown editor and built-in syntax highlighting, Note.Lab is ideal for documenting project plans, storing reusable code snippets, managing credentials, drafting technical documents, and keeping track of development notes — all in one unified workspace.</p>
+                    
+                    <h2>Project Goals</h2>
+                    <ul>
+                        <li>✔️ Developer-oriented UI — Minimal, clean, and familiar to developers used to GitHub.</li>
+                        <li>📝 Markdown & Syntax Highlighting — Perfect for notes containing code, documentation, or technical write-ups.</li>
+                        <li>🔒 Security & Privacy — JWT-based authentication, secure session management, and file-attachment handling meant for privacy-conscious users.</li>
+                        <li>📂 Flexible note types & organization — Supports different note types (standard notes, plan notes, code notes, credentials), tags/categories, full-text search, starred notes, and soft-deletes.</li>
+                        <li>📂 Flexible note types & organization — Supports different note types (standard notes, plan notes, code notes, credentials), tags/categories, full-text search, starred notes, and soft-deletes.</li>
+                    </ul>
+                    
+                    <h2>Technical Stack</h2>
+                    
+                    <h3>Frontend</h3>
+                    <ul>
+                        <li><strong>HTML, CSS, JavaScript</strong> - Core web technologies</li>
+                        <li><strong>Markdown editor</strong> - Powered by CodeMirror</li>
+                        <li><strong>Syntax highlighting</strong> - Via Prism.js</li>
+                    </ul>
+                    
+                    <h3>Backend (serverless)</h3>
+                    <ul>
+                        <li><strong>Cloudflare Workers</strong> - API endpoints & business logic</li>
+                        <li><strong>Cloudflare D1 (SQLite)</strong> - Database with full-text search support</li>
+                        <li><strong>Cloudflare R2</strong> - Object storage for file attachments</li>
+                        <li><strong>Cloudflare KV</strong> - Key-value store for session management / caching</li>
+                        <li><strong>itty-router</strong> - Lightweight router</li>
+                        <li><strong>JWT</strong> - Authentication using JSON Web Tokens</li>
+                    </ul>
+                    
+                    <h2>Feature Timeline & Implementation</h2>
+                    <p>The development of Note.Lab follows a structured and iterative roadmap designed to deliver stable, meaningful features while maintaining a smooth user experience. Each feature is carefully planned, developed, and released in phases to ensure reliability, performance, and seamless integration with existing functionalities.</p>
+                    
+                    <div class="feature-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-date">Phase 1 — Completed</div>
+                            <div class="timeline-content">
+                                <h4>Core Foundation</h4>
+                                <p>Established a stable, secure, and usable environment for technical note-taking.</p>
+                                <ul>
+                                    <li>✓ User authentication with JWT</li>
+                                    <li>✓ Cloudflare Workers backend setup</li>
+                                    <li>✓ D1 database schema (notes, users, sessions)</li>
+                                    <li>✓ R2 storage integration for file attachments</li>
+                                    <li>✓ Basic Markdown editor with syntax highlighting</li>
+                                    <li>✓ Create / edit / delete notes</li>
+                                    <li>✓ Note categories, tags, and search functionality</li>
+                                    <li>✓ Responsive, developer-friendly UI inspired by GitHub</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-date">Phase 2 — Completed</div>
+                            <div class="timeline-content">
+                                <h4>Productivity & Organization Enhancements</h4>
+                                <p>Improve usability, searchability, and efficient note management.</p>
+                                <ul>
+                                    <li>📝 Note templates (project plan, code snippet, credentials, to-do list)</li>
+                                    <li>⭐ Favorite / starred notes</li>
+                                    <li>🔍 Improved search filters (date, category, note type)</li>
+                                    <li>🔎 Full-text search optimization</li>
+                                    <li>📦 Attachment previews inside the editor</li>
+                                    <li>♻️ Bulk delete & bulk update tools</li>
+                                    <li>📁 Folder-based organization</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-date">Phase 3 — Planned</div>
+                            <div class="timeline-content">
+                                <h4>User Experience + Developer Tools</h4>
+                                <p>Enhance developer workflow and improve long-term maintainability.</p>
+                                <ul>
+                                    <li>📜 Version history for notes (Git-like commits)</li>
+                                    <li>📥 Import / export notes (Markdown, JSON, PDF)</li>
+                                    <li>☁️ Offline mode with automatic sync</li>
+                                    <li>⚙️ Workspace settings & personalization</li>
+                                    <li>🎨 Theme customization (light/dark/amoled)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <h2>Current Features</h2>
+                    <ul>
+                        <li>Markdown-based rich note editing with syntax highlighting (code notes, documentation)</li>
+                        <li>Multiple note types: standard notes, plan notes, code notes, credentials notes</li>
+                        <li>Responsive UI (works across desktop and mobile)</li>
+                        <li>Note organization: tagging, categories, full-text search, starring, searching, filtering</li>
+                        <li>Secure user authentication & session management (JWT), with password reset support</li>
+                        <li>Soft-delete notes and bulk operations for management</li>
+                        <li>File attachments via R2 (for storing note-related assets/files)</li>
+                    </ul>
+                    
+                    <h2>Planned / Future Enhancements</h2>
+                    <ul>
+                        <li>Export / import notes (PDF, Markdown)</li>
+                        <li>Version history / "Git-like" commits for notes</li>
+                        <li>Offline mode + sync</li>
+                        <li>Shared notes / multi-user collaboration with access controls</li>
+                        <li>AI-powered summaries / note suggestions</li>
+                        <li>Email integration for password reset (e.g. using SendGrid / Mailgun)</li>
+                        <li>Two-factor authentication (2FA)</li>
+                        <li>Account deletion and data export</li>
+                    </ul>
+                    
+                    <h2>Detailed Code Structure</h2>
+                    
+                    <h3>File Structure</h3>
+                    <pre><code>Note.Lab/
+├── frontend/           # Frontend application
+│   ├── index.html      # Main HTML file
+│   ├── css/            # Stylesheets
+│   ├── js/             # JavaScript modules
+│   └── assets/         # Images and icons
+├── backend/            # Serverless backend (Cloudflare Workers)
+│   ├── src/            # Worker source code
+│   └── schema/         # Database schema(s)
+├── wrangler.toml       # Cloudflare configuration
+└── package.json        # NPM dependencies & scripts</code></pre>
+                    
+                    <h3>Getting Started (for developers)</h3>
+                    
+                    <h4>Prerequisites</h4>
+                    <ul>
+                        <li>Node.js (v16+) and npm</li>
+                        <li>A Cloudflare account with permissions to create D1, R2, KV, and Cloudflare Workers</li>
+                        <li>Wrangler CLI (<code>npm install -g wrangler</code>)</li>
+                    </ul>
+                    
+                    <h4>Setup & Local Dev</h4>
+                    <pre><code># 1. Clone the repo
+git clone https://github.com/Aeroer-Live/Note.Lab.git
+cd Note.Lab
+
+# 2. Install dependencies
+npm install
+
+# 3. Login to Cloudflare using Wrangler
+wrangler login
+
+# 4. Create Cloudflare D1 database
+wrangler d1 create note-lab-db
+# then update wrangler.toml with the DB ID and run schema:
+wrangler d1 execute note-lab-db --file=backend/schema/schema-v2.sql
+
+# 5. Create KV namespace (e.g. "SESSIONS") and R2 bucket 
+# (e.g. "note-lab-attachments"), then update wrangler.toml accordingly
+
+# 6. Add secrets
+wrangler secret put JWT_SECRET
+wrangler secret put ENVIRONMENT
+
+# 7. Start frontend and backend for development
+npm run serve        # frontend
+wrangler dev         # backend (in a separate terminal)</code></pre>
+                    
+                    <h4>Deploy to Production</h4>
+                    <pre><code># Deploy backend
+wrangler deploy
+
+# Build frontend and deploy (upload `dist/` to hosting provider)
+npm run build</code></pre>
+                    
+                    <h3>Key Design Patterns</h3>
+                    <ul>
+                        <li><strong>Single Responsibility Principle</strong>: Each method handles one specific task</li>
+                        <li><strong>Separation of Concerns</strong>: Data, presentation, and logic are clearly separated</li>
+                        <li><strong>Event-Driven Architecture</strong>: User interactions trigger state changes</li>
+                        <li><strong>State Management</strong>: Centralized state in the TodoApp class</li>
+                    </ul>
+                    
+                    <h2>Lessons Learned</h2>
+                    <ul>
+                        <li>Understanding the importance of data structure design before coding</li>
+                        <li>Learning to work with browser APIs like localStorage</li>
+                        <li>Practicing separation of concerns (data, presentation, logic)</li>
+                        <li>Implementing proper error handling and edge cases</li>
+                    </ul>
+                    
+                    <h2>GitHub Commit History</h2>
+                    <p>Development timeline showing key commits and milestones during the project lifecycle.</p>
+                    
+                    <div class="commit-history">
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">5dfe752</span>
+                                <span class="commit-date">Aug 24, 2025</span>
+                            </div>
+                            <div class="commit-message">Update Server Code</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed on Aug 24</p>
+                                <div class="commit-stats">
+                                    <span class="stat">1/1</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">389b27a</span>
+                                <span class="commit-date">Aug 24, 2025</span>
+                            </div>
+                            <div class="commit-message">Update Backend</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed on Aug 24</p>
+                                <div class="commit-stats">
+                                    <span class="stat">1/1</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">dc775bf</span>
+                                <span class="commit-date">Aug 22, 2025</span>
+                            </div>
+                            <div class="commit-message">Update Mobile Version</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed on Aug 22</p>
+                                <div class="commit-stats">
+                                    <span class="stat">1/1</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">2b1058a</span>
+                                <span class="commit-date">Aug 21, 2025</span>
+                            </div>
+                            <div class="commit-message">Update Mobile Version UI & UX + Add Save Option</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed on Aug 21</p>
+                                <div class="commit-stats">
+                                    <span class="stat">1/1</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">ae04645</span>
+                                <span class="commit-date">Aug 19, 2025</span>
+                            </div>
+                            <div class="commit-message">Update New Code Besh</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed on Aug 19</p>
+                                <div class="commit-stats">
+                                    <span class="stat">1/1</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">0913fde</span>
+                                <span class="commit-date">Aug 19, 2025</span>
+                            </div>
+                            <div class="commit-message">Update LOGIN UI & NoteTaking</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed on Aug 19</p>
+                                <div class="commit-stats">
+                                    <span class="stat">1/1</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h2>Challenges & Solutions</h2>
+                    <p>Developing Note.Lab involved navigating several technical challenges to ensure a fast, secure, and developer-friendly experience. Below are key challenges encountered during development and the solutions implemented to overcome them.</p>
+                    
+                    <h3>Challenge: Ensuring Fast Performance on a Serverless Architecture</h3>
+                    <p>Cloudflare Workers offer high performance, but because they are stateless and distributed globally, designing fast, predictable API responses can be difficult — especially when handling large notes, attachments, or frequent queries.</p>
+                    
+                    <h4>Solution</h4>
+                    <ul>
+                        <li>Implemented lightweight routing with <code>itty-router</code> to reduce overhead</li>
+                        <li>Optimized D1 SQL queries using proper indexing (specifically for <code>title</code>, <code>tags</code>, and <code>updatedAt</code>)</li>
+                        <li>Cached frequently used data using Cloudflare KV to reduce database hits</li>
+                        <li>Split large operations (such as note fetching, searching, and handling attachments) into dedicated endpoints</li>
+                    </ul>
+                    
+                    <p><strong>Result:</strong> Achieved fast, consistent performance across regions with minimal latency.</p>
+                    
+                    <h3>Challenge: Secure Authentication Without a Traditional Server</h3>
+                    <p>Implementing secure user authentication on a serverless runtime requires careful handling of sessions, tokens, and secrets, as there is no persistent server to store sessions.</p>
+                    
+                    <h4>Solution</h4>
+                    <ul>
+                        <li>Adopted JWT-based authentication for stateless login</li>
+                        <li>Used KV storage to manage session tokens and enforce their expiry</li>
+                        <li>Added token signing with <code>JWT_SECRET</code> and allowed for environment separation (e.g., <code>ENVIRONMENT=prod/dev</code>)</li>
+                        <li>Implemented protections such as token invalidation on logout and IP/device checks</li>
+                    </ul>
+                    
+                    <p><strong>Result:</strong> Stable, secure, serverless-compatible authentication.</p>
+                </div>
+
+                <!-- Project Footer -->
+                <footer class="project-footer">
+                    <div class="project-links">
+                        <a href="https://github.com/Aeroer-Live/Note.Lab" target="_blank" rel="noopener noreferrer" class="project-link">💻 View GitHub</a>
+                        <a href="https://note-lab.pages.dev" target="_blank" rel="noopener noreferrer" class="project-link">🌐 Live System</a>
+                    </div>
+                    <a href="../index.html" class="back-link">← View All Projects</a>
+                </footer>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer" id="dynamic-footer">
+        <!-- Footer will be dynamically loaded -->
+    </footer>
+
+    <script src="../components.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>
+
