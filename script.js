@@ -19,7 +19,7 @@ const projects = [
         id: 'task-lab',
         title: 'Task Lab',
         category: 'Web App',
-        date: '2025-12-01',
+        date: '2025-10-03',
         description: 'A modern, feature-rich productivity web system built with Next.js, TypeScript, and Tailwind CSS. Designed to help individuals and teams streamline their workflow with powerful task management, project boards, calendar integration, and time tracking.',
         tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Cloudflare Workers', 'Cloudflare D1', 'JWT Authentication' ],
         links: [
