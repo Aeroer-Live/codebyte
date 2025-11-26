@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Lab - CodingLog</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="alternate icon" href="../favicon.svg">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header class="header" id="dynamic-header">
+        <!-- Header will be dynamically loaded -->
+    </header>
+
+    <main class="main">
+        <article class="project-article">
+            <div class="container">
+                <!-- Project Header -->
+                <header class="project-header">
+                    <div class="project-meta">
+                        <span class="project-category">Web App [ Task Management System ]</span>
+                        <span class="project-date">December 01, 2025</span>
+                    </div>
+                    <h1 class="project-title">Task Lab</h1>
+                    <p class="project-description">A modern, feature-rich productivity web system built with Next.js, TypeScript, and Tailwind CSS. Designed to help individuals and teams streamline their workflow with powerful task management, project boards, calendar integration, and time tracking.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Next.js</span>
+                        <span class="project-tag">TypeScript</span>
+                        <span class="project-tag">Tailwind CSS</span>
+                        <span class="project-tag">Cloudflare Workers</span>
+                        <span class="project-tag">Cloudflare D1</span>
+                        <span class="project-tag">JWT Authentication</span>
+                    </div>
+                </header>
+
+                <!-- Project Content -->
+                <div class="project-content">
+                    <h2>Overview</h2>
+                    <p>ProductivityHub is a comprehensive productivity platform designed to help individuals and teams streamline their workflow. Built with Next.js 15 and TypeScript, it offers a modern, type-safe development experience. The platform features powerful task management, project boards, calendar integration, and time tracking capabilities, all backed by a robust Cloudflare Workers serverless backend.</p>
+                    
+                    <h2>Project Goals</h2>
+                    <ul>
+                        <li>🔐 Secure authentication system with email/password and OAuth integration (Google & GitHub)</li>
+                        <li>✅ Comprehensive task management with filtering, priorities, and due dates</li>
+                        <li>📂 Project management for Developer and Marketing projects with progress tracking</li>
+                        <li>📅 Smart calendar integration with Google Calendar & Outlook sync</li>
+                        <li>⏱️ Time tracking with productivity metrics and reporting</li>
+                        <li>🌐 Serverless architecture with Cloudflare Workers for global performance</li>
+                    </ul>
+                    
+                    <h2>Technical Stack</h2>
+                    
+                    <h3>Frontend</h3>
+                    <ul>
+                        <li><strong>Next.js 15</strong> - React framework with App Router</li>
+                        <li><strong>TypeScript</strong> - Type-safe development</li>
+                        <li><strong>Tailwind CSS</strong> - Utility-first CSS framework</li>
+                        <li><strong>Custom UI Components</strong> - Modern, reusable components</li>
+                        <li><strong>Cloudflare Pages</strong> - Global CDN deployment</li>
+                    </ul>
+                    
+                    <h3>Backend (Serverless) ✅ LIVE</h3>
+                    <ul>
+                        <li><strong>Cloudflare Workers</strong> - API endpoints & business logic</li>
+                        <li><strong>Cloudflare D1</strong> - SQL database with complete schema</li>
+                        <li><strong>Cloudflare R2</strong> - Object storage for file attachments</li>
+                        <li><strong>Cloudflare KV</strong> - Key-value store for caching</li>
+                        <li><strong>JWT Authentication</strong> - Secure token-based authentication</li>
+                        <li><strong>Rate Limiting</strong> - Built-in protection</li>
+                        <li><strong>CORS</strong> - Full cross-origin support</li>
+                    </ul>
+                    
+                    <h3>Current Features</h3>
+                    <ul>
+                        <li>🔐 Secure login system with email/password and OAuth (Google & GitHub)</li>
+                        <li>✅ Task management with filtering by status (todo, in-progress, completed)</li>
+                        <li>📊 Priority levels (low, medium, high, urgent)</li>
+                        <li>📂 Project management (Developer & Marketing projects)</li>
+                        <li>📅 Calendar view for events and deadlines</li>
+                        <li>⏱️ Time tracking with start/stop timers</li>
+                        <li>📱 Responsive design for mobile, tablet, and desktop</li>
+                        <li>🌙 Dark mode support</li>
+                    </ul>
+                    
+                    <h3>Planned Features</h3>
+                    <ul>
+                        <li>Two-factor authentication (2FA)</li>
+                        <li>Recurring task automation</li>
+                        <li>Real-time notifications</li>
+                        <li>Team collaboration tools</li>
+                        <li>Advanced analytics and reporting</li>
+                        <li>Mobile app (PWA)</li>
+                    </ul>
+                    
+                    <h2>Feature Timeline & Implementation</h2>
+                    <p>The development of ProductivityHub follows a structured and iterative roadmap designed to deliver stable, meaningful features while maintaining a smooth user experience. Each feature is carefully planned, developed, and released in phases to ensure reliability, performance, and seamless integration with existing functionalities.</p>
+                    
+                    <div class="feature-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-date">Phase 1 — Completed</div>
+                            <div class="timeline-content">
+                                <h4>Core Foundation & Setup</h4>
+                                <p>Established the project foundation with modern technologies and core infrastructure.</p>
+                                <ul>
+                                    <li>✓ Project setup with Next.js 15 & TypeScript</li>
+                                    <li>✓ Tailwind CSS configuration and design system</li>
+                                    <li>✓ Landing page with features showcase</li>
+                                    <li>✓ Authentication UI (Login & Signup pages)</li>
+                                    <li>✓ Dashboard layout with sidebar navigation</li>
+                                    <li>✓ Responsive design for mobile/tablet/desktop</li>
+                                    <li>✓ Dark mode support</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-date">Phase 2 — Completed</div>
+                            <div class="timeline-content">
+                                <h4>Backend Infrastructure & Integration</h4>
+                                <p>Built and integrated the serverless backend with complete API functionality.</p>
+                                <ul>
+                                    <li>✓ Cloudflare Workers backend with full API</li>
+                                    <li>✓ Cloudflare D1 database with complete schema</li>
+                                    <li>✓ JWT authentication system</li>
+                                    <li>✓ Rate limiting and CORS support</li>
+                                    <li>✓ Frontend-backend integration</li>
+                                    <li>✓ API endpoints for tasks, projects, and authentication</li>
+                                    <li>✓ Error handling and response types</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-date">Phase 3 — Completed</div>
+                            <div class="timeline-content">
+                                <h4>Core Features Implementation</h4>
+                                <p>Implemented essential productivity features for task and project management.</p>
+                                <ul>
+                                    <li>✓ Dashboard overview with statistics</li>
+                                    <li>✓ Tasks page with filtering by status</li>
+                                    <li>✓ Priority levels (low, medium, high, urgent)</li>
+                                    <li>✓ Project management (Developer & Marketing types)</li>
+                                    <li>✓ Real-time task and project management</li>
+                                    <li>✓ Task creation, editing, and deletion</li>
+                                    <li>✓ Project boards and progress tracking</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-date">Phase 4 — In Progress</div>
+                            <div class="timeline-content">
+                                <h4>Additional Dashboard Pages</h4>
+                                <p>Expanding dashboard functionality with calendar and time tracking features.</p>
+                                <ul>
+                                    <li>📅 Calendar page development</li>
+                                    <li>⏱️ Time tracking page implementation</li>
+                                    <li>⚙️ Settings page configuration</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-date">Phase 5 — Planned</div>
+                            <div class="timeline-content">
+                                <h4>Advanced Features & Integrations</h4>
+                                <p>Enhance the platform with advanced features and external service integrations.</p>
+                                <ul>
+                                    <li>🔐 Real authentication with OAuth (Google & GitHub)</li>
+                                    <li>📅 Google Calendar & Outlook integration</li>
+                                    <li>🔔 Real-time notifications system</li>
+                                    <li>👥 Team collaboration features</li>
+                                    <li>📈 Advanced analytics and reporting</li>
+                                    <li>📱 Mobile app (PWA)</li>
+                                    <li>📎 File attachments with Cloudflare R2</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h2>File Structure</h2>
+                    <pre><code>productivity-system/
+├── src/
+│   ├── app/                    # Next.js App Router pages
+│   │   ├── auth/              # Authentication pages
+│   │   ├── dashboard/         # Dashboard pages
+│   │   ├── layout.tsx         # Root layout
+│   │   └── page.tsx           # Landing page
+│   ├── components/            # React components
+│   │   ├── auth/             # Auth components
+│   │   ├── dashboard/        # Dashboard components
+│   │   ├── layout/           # Layout components (Navbar, Sidebar)
+│   │   ├── tasks/            # Task components
+│   │   ├── projects/         # Project components
+│   │   └── ui/               # Reusable UI components
+│   ├── lib/                  # Utility functions
+│   └── types/                # TypeScript type definitions
+├── public/                   # Static assets
+├── database/                 # Database schema files
+├── wrangler.toml            # Cloudflare configuration
+└── package.json             # NPM dependencies & scripts</code></pre>
+                    
+                    <h2>Architecture Overview</h2>
+                    <p>ProductivityHub follows a modern serverless architecture with Next.js App Router on the frontend and Cloudflare Workers on the backend. The application uses TypeScript throughout for type safety, Tailwind CSS for styling, and Cloudflare D1 for database persistence. The serverless backend ensures global performance with minimal latency, while the frontend provides a responsive, modern user experience.</p>
+                    
+                    <h3>API Endpoints</h3>
+                    <p>The backend API is deployed and running on Cloudflare Workers:</p>
+                    <ul>
+                        <li><strong>Authentication</strong>: <code>/api/auth/*</code> (register, login, me)</li>
+                        <li><strong>Tasks</strong>: <code>/api/tasks/*</code> (CRUD operations, bulk actions)</li>
+                        <li><strong>Projects</strong>: <code>/api/projects/*</code> (CRUD operations, statistics)</li>
+                        <li><strong>Calendar</strong>: <code>/api/calendar/*</code> (event management)</li>
+                        <li><strong>Time Tracking</strong>: <code>/api/time-tracking/*</code> (timer, logs, stats)</li>
+                    </ul>
+                    
+                    <h3>Key Design Patterns</h3>
+                    <ul>
+                        <li><strong>Single Responsibility Principle</strong>: Each module handles a specific concern</li>
+                        <li><strong>Separation of Concerns</strong>: Data, presentation, and logic are clearly separated</li>
+                        <li><strong>Event-Driven Architecture</strong>: User interactions trigger state changes</li>
+                        <li><strong>State Management</strong>: Centralized state management with local persistence</li>
+                    </ul>
+                    
+                    <h2>Getting Started (for developers)</h2>
+                    
+                    <h3>Prerequisites</h3>
+                    <ul>
+                        <li>Node.js (v16+) and npm</li>
+                        <li>A Cloudflare account with permissions to create D1, R2, KV, and Cloudflare Workers</li>
+                        <li>Wrangler CLI (<code>npm install -g wrangler</code>)</li>
+                    </ul>
+                    
+                    <h3>Installation</h3>
+                    <pre><code># Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start</code></pre>
+                    
+                    <h3>Development Server</h3>
+                    <p>The development server runs on <code>http://localhost:3000</code></p>
+                    
+                    <h3>Available Pages</h3>
+                    <ul>
+                        <li><strong>Landing Page</strong>: <code>/</code></li>
+                        <li><strong>Login</strong>: <code>/auth/login</code></li>
+                        <li><strong>Sign Up</strong>: <code>/auth/signup</code></li>
+                        <li><strong>Dashboard</strong>: <code>/dashboard</code></li>
+                        <li><strong>Tasks</strong>: <code>/dashboard/tasks</code></li>
+                        <li><strong>Projects</strong>: <code>/dashboard/projects</code></li>
+                        <li><strong>Calendar</strong>: <code>/dashboard/calendar</code> (coming soon)</li>
+                        <li><strong>Time Tracking</strong>: <code>/dashboard/time-tracking</code> (coming soon)</li>
+                    </ul>
+                    
+                    <h2>Lessons Learned</h2>
+                    <ul>
+                        <li>Understanding serverless architecture with Cloudflare Workers and D1</li>
+                        <li>Learning Next.js 15 App Router patterns and TypeScript best practices</li>
+                        <li>Implementing JWT authentication in a serverless environment</li>
+                        <li>Building responsive UIs with Tailwind CSS</li>
+                        <li>Managing state across multiple dashboard pages</li>
+                        <li>Integrating frontend and backend APIs effectively</li>
+                    </ul>
+                    
+                    <h2>Challenges & Solutions</h2>
+                    <p>Developing ProductivityHub involved several technical challenges to ensure a fast, secure, and scalable application.</p>
+                    
+                    <h3>Challenge: Serverless Backend Integration</h3>
+                    <p>Integrating a Next.js frontend with Cloudflare Workers backend while maintaining type safety and error handling.</p>
+                    
+                    <h4>Solution</h4>
+                    <ul>
+                        <li>Created TypeScript type definitions shared between frontend and backend</li>
+                        <li>Implemented proper error handling and response types</li>
+                        <li>Used environment variables for API configuration</li>
+                        <li>Added CORS support for cross-origin requests</li>
+                    </ul>
+                    
+                    <p><strong>Result:</strong> Seamless integration between frontend and backend with type safety.</p>
+                    
+                    <h3>Challenge: Database Schema Design</h3>
+                    <p>Designing an efficient database schema for tasks, projects, users, and relationships using Cloudflare D1.</p>
+                    
+                    <h4>Solution</h4>
+                    <ul>
+                        <li>Created normalized database schema with proper relationships</li>
+                        <li>Implemented indexes for frequently queried fields</li>
+                        <li>Added foreign key constraints for data integrity</li>
+                        <li>Designed migration scripts for schema updates</li>
+                    </ul>
+                    
+                    <p><strong>Result:</strong> Efficient database queries and data integrity.</p>
+                </div>
+
+                <!-- Project Footer -->
+                <footer class="project-footer">
+                    <div class="project-links">
+                        <a href="https://github.com/Aeroer-Live/task-management-system" target="_blank" rel="noopener noreferrer" class="project-link">💻 View GitHub</a>
+                    </div>
+                    <a href="../index.html" class="back-link">← View All Projects</a>
+                </footer>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer" id="dynamic-footer">
+        <!-- Footer will be dynamically loaded -->
+    </footer>
+
+    <script src="../components.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>
+

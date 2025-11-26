@@ -14,6 +14,18 @@ const projects = [
             { text: 'View Code', url: 'https://github.com/example/todo-app' },
             { text: 'Live Demo', url: 'https://example.com/todo-app' }
         ]
+    },
+    {
+        id: 'task-lab',
+        title: 'Task Lab',
+        category: 'Web App',
+        date: '2025-12-01',
+        description: 'A modern, feature-rich productivity web system built with Next.js, TypeScript, and Tailwind CSS. Designed to help individuals and teams streamline their workflow with powerful task management, project boards, calendar integration, and time tracking.',
+        tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Cloudflare Workers', 'Cloudflare D1', 'JWT Authentication' ],
+        links: [
+            { text: 'View Code', url: 'https://github.com/Aeroer-Live/task-management-system' },
+            { text: 'Live API', url: 'https://productivity-system-api.aeroermark.workers.dev' }
+        ]
     }
 ];
 
@@ -62,7 +74,8 @@ function renderProjects() {
 function navigateToProject(projectId) {
     // Map project IDs to their HTML file names in the projects folder
     const projectFileMap = {
-        'note-lab': 'projects/note-lab.html'
+        'note-lab': 'projects/note-lab.html',
+        'task-lab': 'projects/task-lab.html'
     };
     
     const fileName = projectFileMap[projectId];
