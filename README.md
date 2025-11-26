@@ -1,4 +1,4 @@
-# CodingLog
+# CodeByte
 
 A developer-focused platform for documenting and breaking down programming projects. Built with HTML, CSS, and JavaScript.
 
@@ -64,56 +64,4 @@ const projectFileMap = {
 };
 ```
 
-4. **Write your project content** directly in the HTML file using the same structure as the existing project pages. Make sure to use `../styles.css` and `../script.js` for the CSS and JavaScript paths, and `../index.html` for links back to the main page.
-
-## Content Structure Guidelines
-
-When documenting a project, consider including:
-
-1. **Overview**: What the project is and its purpose
-2. **Project Goals**: What you set out to achieve
-3. **Technical Stack**: Technologies and tools used
-4. **Key Features**: Main functionality breakdown
-5. **Code Structure**: Architecture and code organization
-6. **Lessons Learned**: Insights and takeaways
-7. **Challenges & Solutions**: Problems encountered and how you solved them
-
-## Customization
-
-### Colors
-
-Edit the CSS variables in `styles.css` to customize the color scheme:
-
-```css
-:root {
-    --bg-primary: #1e1e1e;
-    --code-keyword: #569cd6;
-    --accent-primary: #007acc;
-    /* ... more variables */
-}
-```
-
-### Typography
-
-Modify font families in the `:root` section:
-
-```css
---font-mono: 'Courier New', 'Monaco', 'Menlo', 'Consolas', monospace;
---font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', ...;
-```
-
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
-## License
-
-This project is for educational purposes.
-
-## Contributing
-
-Feel free to fork this project and customize it for your own use. Add your projects, modify the design, and make it your own!
 
