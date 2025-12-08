@@ -26,6 +26,18 @@ const projects = [
             { text: 'View Code', url: 'https://github.com/Aeroer-Live/task-management-system' },
             { text: 'Live API', url: 'https://productivity-system-api.aeroermark.workers.dev' }
         ]
+    },
+    {
+        id: 'build-learn-deploy',
+        title: 'Build. Learn. Deploy.',
+        category: 'Educational Platform',
+        date: '2025-01-15',
+        description: 'DevLearn Platform - A comprehensive static educational website designed to train and guide new software engineers through structured learning paths with 13 custom modules covering fundamental to advanced topics.',
+        tags: ['HTML5', 'CSS3', 'JavaScript', 'Static Site', 'Educational', 'CodeMirror' ],
+        links: [
+            { text: 'View Documentation', url: '#' },
+            { text: 'Learn More', url: '#' }
+        ]
     }
 ];
 
@@ -75,7 +87,8 @@ function navigateToProject(projectId) {
     // Map project IDs to their HTML file names in the projects folder
     const projectFileMap = {
         'note-lab': 'projects/note-lab.html',
-        'task-lab': 'projects/task-lab.html'
+        'task-lab': 'projects/task-lab.html',
+        'build-learn-deploy': 'projects/build-learn-deploy.html'
     };
     
     const fileName = projectFileMap[projectId];
