@@ -31,7 +31,7 @@ const projects = [
         id: 'build-learn-deploy',
         title: 'Build. Learn. Deploy.',
         category: 'Educational Platform',
-        date: '2025-01-15',
+        date: '2025-12-03',
         description: 'DevLearn Platform - A comprehensive static educational website designed to train and guide new software engineers through structured learning paths with 13 custom modules covering fundamental to advanced topics.',
         tags: ['HTML5', 'CSS3', 'JavaScript', 'Static Site', 'Educational', 'CodeMirror' ],
         links: [
