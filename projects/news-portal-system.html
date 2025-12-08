@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEC News Portal - CodingLog</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="alternate icon" href="../favicon.svg">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header class="header" id="dynamic-header">
+        <!-- Header will be dynamically loaded -->
+    </header>
+
+    <main class="main">
+        <article class="project-article">
+            <div class="container">
+                <!-- Project Header -->
+                <header class="project-header">
+                    <div class="project-meta">
+                        <span class="project-category">News Portal [ Content Management System ]</span>
+                        <span class="project-date">November 08, 2025</span>
+                    </div>
+                    <h1 class="project-title">TEC News Portal</h1>
+                    <p class="project-description">A modern, full-stack news portal system built for Telecommunication Engineering College in Malaysia. Provides complete content management with writer dashboards, admin controls, and a public-facing news portal.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Cloudflare Workers</span>
+                        <span class="project-tag">Cloudflare D1</span>
+                        <span class="project-tag">Cloudflare R2</span>
+                        <span class="project-tag">JWT Authentication</span>
+                        <span class="project-tag">Multi-language</span>
+                        <span class="project-tag">Serverless</span>
+                    </div>
+                </header>
+
+                <!-- Project Content -->
+                <div class="project-content">
+                    <h2>Overview</h2>
+                    <p>TEC News Portal is a modern, full-stack news portal system built entirely on Cloudflare's edge network. It provides a complete content management solution with writer dashboards, admin controls, and a public-facing news portal. The system features multi-language support (English and Malay), responsive design with dark/light theme, integrated media management, and SEO optimization with dynamic meta tags for social media sharing.</p>
+                    
+                    <h2>Project Goals</h2>
+                    <ul>
+                        <li>🌐 Serverless Architecture — Built entirely on Cloudflare's edge network for global performance</li>
+                        <li>🌍 Multi-language Support — English and Malay (Bahasa Malaysia) for diverse audience</li>
+                        <li>📱 Responsive Design — Mobile-first approach with dark/light theme support</li>
+                        <li>📝 Content Management — Complete workflow from article creation to publication</li>
+                        <li>🖼️ Media Management — Integrated R2 storage for images and videos</li>
+                        <li>🔍 SEO Optimized — Dynamic meta tags for social media sharing</li>
+                        <li>👥 User Roles — Public visitors, writers, and administrators</li>
+                    </ul>
+                    
+                    <h2>Technical Stack</h2>
+                    
+                    <h3>Frontend</h3>
+                    <ul>
+                        <li><strong>HTML5</strong> - Semantic markup for accessibility and SEO</li>
+                        <li><strong>CSS3</strong> - Modern styling with CSS variables, Flexbox, Grid</li>
+                        <li><strong>JavaScript (ES6+)</strong> - Vanilla JS with class-based architecture</li>
+                        <li><strong>Font Awesome 6.0</strong> - Icon library</li>
+                        <li><strong>Google Fonts</strong> - Poppins, Roboto, Inter font families</li>
+                    </ul>
+                    
+                    <h3>Backend & Infrastructure</h3>
+                    <ul>
+                        <li><strong>Cloudflare Pages</strong> - Static site hosting with global CDN</li>
+                        <li><strong>Cloudflare Workers</strong> - Serverless edge computing (JavaScript)</li>
+                        <li><strong>Cloudflare D1</strong> - SQLite-based distributed database</li>
+                        <li><strong>Cloudflare R2</strong> - S3-compatible object storage for media</li>
+                        <li><strong>JWT</strong> - Token-based authentication</li>
+                    </ul>
+                    
+                    <h3>Development Tools</h3>
+                    <ul>
+                        <li><strong>Wrangler CLI</strong> - Cloudflare Workers deployment tool</li>
+                        <li><strong>Node.js</strong> - Local development server and CORS proxy</li>
+                        <li><strong>Express.js</strong> - CORS proxy server (local dev)</li>
+                    </ul>
+                    
+                    <h2>Architecture Overview</h2>
+                    <p>The system follows a serverless architecture with clear separation between frontend (Cloudflare Pages) and backend (Cloudflare Workers). The architecture includes multiple specialized workers for different functionalities, ensuring scalability and maintainability.</p>
+                    
+                    <h3>System Architecture</h3>
+                    <pre><code>Cloudflare Pages (Frontend)
+    ↓ HTTP Requests
+Cloudflare Workers (Edge)
+    ├── Auth Worker      (/api/auth/*)
+    ├── Articles Worker  (/api/articles/*)
+    ├── Admin Worker     (/api/admin/*)
+    ├── Upload Worker    (/api/upload/*)
+    └── Preview Worker   (Meta tag rewriting)
+    ↓
+    ├── Cloudflare D1 (Database)
+    └── Cloudflare R2 (Media Storage)</code></pre>
+                    
+                    <h3>Request Flow</h3>
+                    <ul>
+                        <li><strong>Public Article View</strong>: index.html → articles-worker → D1 Database → Display articles</li>
+                        <li><strong>Article Detail</strong>: article-detail.html?id=X → preview-worker (rewrites meta) → Display</li>
+                        <li><strong>Writer Login</strong>: login.html → auth-worker → JWT Token → Dashboard access</li>
+                        <li><strong>Article Submission</strong>: writer-dashboard.html → auth-worker → D1 Insert → Status: Pending</li>
+                        <li><strong>Admin Review</strong>: admin-dashboard.html → admin-worker → Approve/Reject → Status: Published</li>
+                        <li><strong>Media Upload</strong>: Drag & Drop → auth-worker → R2 Storage → URL Returned</li>
+                    </ul>
+                    
+                    <h2>Core Features</h2>
+                    
+                    <h3>Public Features</h3>
+                    <ul>
+                        <li>Homepage with featured articles carousel</li>
+                        <li>Latest articles grid with pagination</li>
+                        <li>Search functionality across title, content, and tags</li>
+                        <li>Category browsing and filtering</li>
+                        <li>Article detail page with rich media</li>
+                        <li>Writer profile cards</li>
+                        <li>Social sharing buttons</li>
+                        <li>Dynamic meta tags for SEO</li>
+                        <li>Bilingual support (English/Malay)</li>
+                        <li>Dark/Light theme toggle</li>
+                    </ul>
+                    
+                    <h3>Writer Features</h3>
+                    <ul>
+                        <li>Dashboard with article statistics</li>
+                        <li>Rich text editor for article creation</li>
+                        <li>Media upload (drag & drop) to R2</li>
+                        <li>Auto-save drafts functionality</li>
+                        <li>Preview mode before submission</li>
+                        <li>Tag management</li>
+                        <li>Article status tracking (draft, pending, published, rejected)</li>
+                        <li>Profile management with avatar upload</li>
+                        <li>View all submitted articles</li>
+                    </ul>
+                    
+                    <h3>Admin Features</h3>
+                    <ul>
+                        <li>Article review interface (approve/reject/request changes)</li>
+                        <li>Review comments and feedback</li>
+                        <li>Review history tracking</li>
+                        <li>User management (create writers, activate/suspend users)</li>
+                        <li>Password reset functionality</li>
+                        <li>Featured articles management</li>
+                        <li>Featured articles reordering</li>
+                        <li>Dashboard statistics and analytics</li>
+                        <li>Article performance metrics</li>
+                        <li>User activity monitoring</li>
+                    </ul>
+                    
+                    <h2>Database Schema</h2>
+                    
+                    <h3>Tables</h3>
+                    <ul>
+                        <li><strong>users</strong> - User accounts (writers and admins)</li>
+                        <li><strong>articles</strong> - Article content with status tracking</li>
+                        <li><strong>article_media</strong> - Media attachments for articles</li>
+                        <li><strong>article_reviews</strong> - Review history and comments</li>
+                        <li><strong>analytics</strong> - Usage statistics</li>
+                    </ul>
+                    
+                    <h3>Key Relationships</h3>
+                    <pre><code>users (1) ──→ (N) articles
+articles (1) ──→ (N) article_media
+articles (1) ──→ (N) article_reviews
+users (1) ──→ (N) article_reviews [as reviewer]</code></pre>
+                    
+                    <h2>Cloudflare Workers</h2>
+                    
+                    <h3>Auth Worker</h3>
+                    <ul>
+                        <li><strong>URL</strong>: <code>https://auth-worker.asaascom-server.workers.dev</code></li>
+                        <li><strong>Routes</strong>: <code>/api/auth/*</code>, <code>/api/profile/*</code>, <code>/api/upload/*</code></li>
+                        <li><strong>Functions</strong>: Login, token validation, profile management, media upload</li>
+                    </ul>
+                    
+                    <h3>Articles Worker</h3>
+                    <ul>
+                        <li><strong>URL</strong>: <code>https://articles-worker.asaascom-server.workers.dev</code></li>
+                        <li><strong>Routes</strong>: <code>/api/articles/*</code></li>
+                        <li><strong>Functions</strong>: Article CRUD, search, featured articles, published articles</li>
+                    </ul>
+                    
+                    <h3>Admin Worker</h3>
+                    <ul>
+                        <li><strong>URL</strong>: <code>https://admin-worker.asaascom-server.workers.dev</code></li>
+                        <li><strong>Routes</strong>: <code>/api/admin/*</code></li>
+                        <li><strong>Functions</strong>: User management, article review, analytics, featured management</li>
+                    </ul>
+                    
+                    <h3>Preview Worker</h3>
+                    <ul>
+                        <li><strong>URL</strong>: <code>https://preview-worker.asaascom-server.workers.dev</code></li>
+                        <li><strong>Routes</strong>: <code>www.newstec.my/article-detail*</code></li>
+                        <li><strong>Functions</strong>: Dynamic meta tag rewriting for social sharing</li>
+                    </ul>
+                    
+                    <h2>File Structure</h2>
+                    <pre><code>News.Portal/
+├── HTML Pages
+│   ├── index.html                    # Main homepage
+│   ├── article-detail.html           # Article detail page
+│   ├── login.html                    # Login page
+│   ├── writer-dashboard.html         # Writer dashboard
+│   ├── admin-dashboard.html          # Admin dashboard
+│   └── [legal pages]
+│
+├── styles/                           # CSS Stylesheets
+│   ├── main.css                      # Core styles
+│   ├── responsive.css                # Mobile-first responsive
+│   ├── article-detail.css            # Article page styles
+│   ├── dashboard.css                 # Dashboard layouts
+│   └── [other stylesheets]
+│
+├── js/                               # JavaScript Modules
+│   ├── main.js                       # Main app initialization
+│   ├── language.js                   # Bilingual system (EN/MS)
+│   ├── theme.js                      # Dark/light theme toggle
+│   ├── articles.js                   # Article listing & display
+│   ├── auth.js                       # Authentication helpers
+│   ├── writer.js                     # Writer dashboard logic
+│   └── admin.js                      # Admin dashboard logic
+│
+├── lang/                             # Localization Files
+│   ├── en.json                       # English translations
+│   └── ms.json                       # Malay translations
+│
+├── workers/                          # Cloudflare Workers
+│   ├── auth-worker.js                # Authentication API
+│   ├── articles-worker.js            # Article CRUD API
+│   ├── admin-worker.js               # Admin operations API
+│   ├── upload-worker.js              # Media upload handler
+│   └── preview-worker.js             # Social meta tag rewriting
+│
+└── Database Scripts                  # SQL Files
+    ├── schema.sql                    # Initial database schema
+    └── [migration scripts]</code></pre>
+                    
+                    <h2>API Endpoints</h2>
+                    
+                    <h3>Authentication</h3>
+                    <ul>
+                        <li><code>POST /api/auth/login</code> - Login user and receive JWT token</li>
+                        <li><code>POST /api/auth/validate</code> - Validate JWT token</li>
+                        <li><code>GET /api/profile</code> - Get user profile</li>
+                        <li><code>PUT /api/profile</code> - Update user profile</li>
+                    </ul>
+                    
+                    <h3>Articles</h3>
+                    <ul>
+                        <li><code>GET /api/articles/published</code> - Get published articles with pagination</li>
+                        <li><code>GET /api/articles/featured-public</code> - Get featured articles for homepage</li>
+                        <li><code>GET /api/articles/search?q={query}</code> - Search published articles</li>
+                        <li><code>GET /api/articles/{id}</code> - Get single article by ID</li>
+                        <li><code>POST /api/articles/submit</code> - Submit new article for review</li>
+                    </ul>
+                    
+                    <h3>Admin</h3>
+                    <ul>
+                        <li><code>GET /api/admin/stats</code> - Get dashboard statistics</li>
+                        <li><code>GET /api/admin/articles/pending</code> - Get pending articles for review</li>
+                        <li><code>POST /api/admin/articles/{id}/approve</code> - Approve article for publication</li>
+                        <li><code>POST /api/admin/articles/{id}/reject</code> - Reject article</li>
+                        <li><code>GET /api/admin/users</code> - List all users</li>
+                    </ul>
+                    
+                    <h3>Upload</h3>
+                    <ul>
+                        <li><code>POST /api/upload/image</code> - Upload image file to R2</li>
+                    </ul>
+                    
+                    <h2>Key Design Patterns</h2>
+                    <ul>
+                        <li><strong>Serverless Architecture</strong> - Edge computing for global performance</li>
+                        <li><strong>Microservices Pattern</strong> - Separate workers for different functionalities</li>
+                        <li><strong>RESTful API</strong> - Standard HTTP methods and status codes</li>
+                        <li><strong>JWT Authentication</strong> - Stateless token-based authentication</li>
+                        <li><strong>Component-Based Frontend</strong> - Reusable JavaScript modules</li>
+                        <li><strong>Configuration-Driven</strong> - Centralized configuration for easy updates</li>
+                    </ul>
+                    
+                    <h2>Deployment</h2>
+                    
+                    <h3>Frontend (Cloudflare Pages)</h3>
+                    <pre><code># Manual Deployment
+wrangler pages deploy . --project-name=tec-news-portal
+
+# Automatic Deployment
+# Connect GitHub repository in Cloudflare Dashboard
+# Configure build: (none, static site)
+# Output directory: / (root)</code></pre>
+                    
+                    <h3>Workers Deployment</h3>
+                    <pre><code># Auth Worker
+cd workers
+wrangler deploy auth-worker.js --config wrangler-admin.toml
+
+# Articles Worker
+wrangler deploy articles-worker.js --config wrangler-articles.toml
+
+# Admin Worker
+wrangler deploy admin-worker.js --config wrangler-admin.toml
+
+# Preview Worker
+wrangler deploy preview-worker.js --config wrangler-preview.toml</code></pre>
+                    
+                    <h3>Database Setup</h3>
+                    <pre><code># Create D1 Database
+wrangler d1 create tec-news-db
+
+# Run Schema
+wrangler d1 execute tec-news-db --file=schema.sql
+
+# Add Sample Data
+wrangler d1 execute tec-news-db --file=add-sample-articles.sql</code></pre>
+                    
+                    <h2>Security Features</h2>
+                    <ul>
+                        <li><strong>JWT Tokens</strong> - 24-hour expiration with secure signing</li>
+                        <li><strong>Password Hashing</strong> - SHA-256 using Web Crypto API</li>
+                        <li><strong>Token Validation</strong> - On every protected request</li>
+                        <li><strong>CORS Protection</strong> - Configured per worker</li>
+                        <li><strong>Input Validation</strong> - Both client and server-side</li>
+                        <li><strong>SQL Injection Prevention</strong> - Parameterized queries</li>
+                        <li><strong>XSS Protection</strong> - HTML sanitization</li>
+                        <li><strong>File Upload Validation</strong> - Type and size checks</li>
+                        <li><strong>HTTPS Only</strong> - Enforced by Cloudflare</li>
+                    </ul>
+                    
+                    <h2>Lessons Learned</h2>
+                    <ul>
+                        <li>Understanding serverless architecture with Cloudflare Workers</li>
+                        <li>Learning to work with Cloudflare D1 distributed database</li>
+                        <li>Implementing JWT authentication in serverless environment</li>
+                        <li>Building multi-language support with JSON-based translations</li>
+                        <li>Creating dynamic meta tag rewriting for SEO</li>
+                        <li>Managing media files with Cloudflare R2 object storage</li>
+                        <li>Designing content management workflows</li>
+                        <li>Implementing article review and approval systems</li>
+                    </ul>
+                    
+                    <h2>GitHub Commit History</h2>
+                    <p>Development timeline showing key commits and milestones during the project lifecycle.</p>
+                    
+                    <div class="commit-history">
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">237932c</span>
+                                <span class="commit-date">Nov 12, 2025</span>
+                            </div>
+                            <div class="commit-message">New Code Link</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed on Nov 12</p>
+                                <div class="commit-stats">
+                                    <span class="stat">1/1</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">42c35a8</span>
+                                <span class="commit-date">Nov 12, 2025</span>
+                            </div>
+                            <div class="commit-message">Bug Fixed for Link Preview</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed on Nov 12</p>
+                                <div class="commit-stats">
+                                    <span class="stat">1/1</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">47fe6f2</span>
+                                <span class="commit-date">Nov 12, 2025</span>
+                            </div>
+                            <div class="commit-message">Update New Server Code - Meta Link Info</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed on Nov 12</p>
+                                <div class="commit-stats">
+                                    <span class="stat">1/1</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">76482b8</span>
+                                <span class="commit-date">Nov 12, 2025</span>
+                            </div>
+                            <div class="commit-message">Meta Info Bug Fixed</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed on Nov 12</p>
+                                <div class="commit-stats">
+                                    <span class="stat">1/1</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">0515443</span>
+                                <span class="commit-date">Sep 26, 2025</span>
+                            </div>
+                            <div class="commit-message">Update Bug Fixed</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed on Sep 26</p>
+                                <div class="commit-stats">
+                                    <span class="stat">1/1</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">50b5fcf</span>
+                                <span class="commit-date">Sep 22, 2025</span>
+                            </div>
+                            <div class="commit-message">Update &lt;b&gt; &lt;/b&gt; teg [Dark Mood CSS Code]</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed on Sep 22</p>
+                                <div class="commit-stats">
+                                    <span class="stat">1/1</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">9950b84</span>
+                                <span class="commit-date">Sep 19, 2025</span>
+                            </div>
+                            <div class="commit-message">Text Editor - Update</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed on Sep 19</p>
+                                <div class="commit-stats">
+                                    <span class="stat">1/1</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">8051f09</span>
+                                <span class="commit-date">Sep 19, 2025</span>
+                            </div>
+                            <div class="commit-message">Bug Fixed</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed on Sep 19</p>
+                                <div class="commit-stats">
+                                    <span class="stat">1/1</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">deb3ea6</span>
+                                <span class="commit-date">Sep 12, 2025</span>
+                            </div>
+                            <div class="commit-message">Update New Code</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed on Sep 12</p>
+                                <div class="commit-stats">
+                                    <span class="stat">1/1</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">e503faa</span>
+                                <span class="commit-date">Sep 12, 2025</span>
+                            </div>
+                            <div class="commit-message">Update main.css</div>
+                            <div class="commit-body">
+                                <p>AeroerMak authored on Sep 12 (Verified)</p>
+                                <div class="commit-stats">
+                                    <span class="stat">1/1</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">5beac43</span>
+                                <span class="commit-date">Sep 10, 2025</span>
+                            </div>
+                            <div class="commit-message">Update - link</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed on Sep 10</p>
+                                <div class="commit-stats">
+                                    <span class="stat">1/1</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">e8abc5f</span>
+                                <span class="commit-date">Sep 10, 2025</span>
+                            </div>
+                            <div class="commit-message">Develop New Page</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed on Sep 10</p>
+                                <div class="commit-stats">
+                                    <span class="stat">1/1</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">7ff9041</span>
+                                <span class="commit-date">Sep 9, 2025</span>
+                            </div>
+                            <div class="commit-message">Code Update</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed on Sep 9</p>
+                                <div class="commit-stats">
+                                    <span class="stat">1/1</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">a020e2c</span>
+                                <span class="commit-date">Sep 9, 2025</span>
+                            </div>
+                            <div class="commit-message">Update</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed on Sep 9</p>
+                                <div class="commit-stats">
+                                    <span class="stat">1/1</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">3521c99</span>
+                                <span class="commit-date">Sep 9, 2025</span>
+                            </div>
+                            <div class="commit-message">Remove code</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed on Sep 9</p>
+                                <div class="commit-stats">
+                                    <span class="stat">1/1</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">2ccee2b</span>
+                                <span class="commit-date">Sep 9, 2025</span>
+                            </div>
+                            <div class="commit-message">Writer 'View All Articles' Bug Fix</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed on Sep 9</p>
+                                <div class="commit-stats">
+                                    <span class="stat">1/1</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h2>Challenges & Solutions</h2>
+                    <p>Developing TEC News Portal involved several technical challenges to ensure a fast, secure, and scalable application.</p>
+                    
+                    <h3>Challenge: Serverless Architecture Complexity</h3>
+                    <p>Managing multiple Cloudflare Workers, coordinating between them, and ensuring proper data flow across the serverless infrastructure.</p>
+                    
+                    <h4>Solution</h4>
+                    <ul>
+                        <li>Created specialized workers for different functionalities (auth, articles, admin, upload, preview)</li>
+                        <li>Implemented consistent API patterns across all workers</li>
+                        <li>Used shared environment variables and configurations</li>
+                        <li>Created deployment scripts for streamlined worker deployment</li>
+                    </ul>
+                    
+                    <p><strong>Result:</strong> Maintainable and scalable serverless architecture.</p>
+                    
+                    <h3>Challenge: Dynamic Meta Tags for Social Sharing</h3>
+                    <p>Ensuring proper social media previews (Open Graph, Twitter Cards) for shared articles without server-side rendering.</p>
+                    
+                    <h4>Solution</h4>
+                    <ul>
+                        <li>Created Preview Worker using HTMLRewriter API</li>
+                        <li>Intercepted article detail page requests</li>
+                        <li>Fetched article data from API and dynamically rewrote meta tags</li>
+                        <li>Optimized for Facebook, Twitter, LinkedIn sharing</li>
+                    </ul>
+                    
+                    <p><strong>Result:</strong> Perfect social media previews with dynamic content.</p>
+                    
+                    <h3>Challenge: Multi-language Support</h3>
+                    <p>Implementing bilingual support (English/Malay) across all pages and maintaining translation consistency.</p>
+                    
+                    <h4>Solution</h4>
+                    <ul>
+                        <li>Created JSON-based translation files (en.json, ms.json)</li>
+                        <li>Built LanguageManager class for dynamic language switching</li>
+                        <li>Persisted language preference in localStorage</li>
+                        <li>Applied translations to all UI elements and content</li>
+                    </ul>
+                    
+                    <p><strong>Result:</strong> Seamless bilingual experience for users.</p>
+                </div>
+
+                <!-- Project Footer -->
+                <footer class="project-footer">
+                    <div class="project-links">
+                        <a href="https://www.newstec.my" target="_blank" rel="noopener noreferrer" class="project-link">🌐 Live Website</a>
+                    </div>
+                    <a href="../index.html" class="back-link">← View All Projects</a>
+                </footer>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer" id="dynamic-footer">
+        <!-- Footer will be dynamically loaded -->
+    </footer>
+
+    <script src="../components.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>
+

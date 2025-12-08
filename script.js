@@ -38,6 +38,18 @@ const projects = [
             { text: 'View Documentation', url: '#' },
             { text: 'Learn More', url: '#' }
         ]
+    },
+    {
+        id: 'news-portal-system',
+        title: 'TEC News Portal',
+        category: 'News Portal',
+        date: '2025-11-08',
+        description: 'A modern, full-stack news portal system built for Telecommunication Engineering College in Malaysia. Provides complete content management with writer dashboards, admin controls, and a public-facing news portal.',
+        tags: ['Cloudflare Workers', 'Cloudflare D1', 'Cloudflare R2', 'JWT Authentication', 'Multi-language', 'Serverless' ],
+        links: [
+            { text: 'View Documentation', url: '#' },
+            { text: 'Learn More', url: '#' }
+        ]
     }
 ];
 
@@ -88,7 +100,8 @@ function navigateToProject(projectId) {
     const projectFileMap = {
         'note-lab': 'projects/note-lab.html',
         'task-lab': 'projects/task-lab.html',
-        'build-learn-deploy': 'projects/build-learn-deploy.html'
+        'build-learn-deploy': 'projects/build-learn-deploy.html',
+        'news-portal-system': 'projects/news-portal-system.html'
     };
     
     const fileName = projectFileMap[projectId];
