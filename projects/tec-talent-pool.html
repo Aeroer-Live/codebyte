@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEC Talent Pool - CodingLog</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="alternate icon" href="../favicon.svg">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header class="header" id="dynamic-header">
+        <!-- Header will be dynamically loaded -->
+    </header>
+
+    <main class="main">
+        <article class="project-article">
+            <div class="container">
+                <!-- Project Header -->
+                <header class="project-header">
+                    <div class="project-meta">
+                        <span class="project-category">Management System [ Talent Pool Management ]</span>
+                        <span class="project-date">November 15, 2025</span>
+                    </div>
+                    <h1 class="project-title">TEC Talent Pool</h1>
+                    <p class="project-description">A comprehensive Talent Pool Management System for TEC's in-house graduates, built with HTML, CSS, JavaScript, and Cloudflare Workers/Pages. Fully cloud-based with no local database dependencies.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Cloudflare Pages</span>
+                        <span class="project-tag">Cloudflare D1</span>
+                        <span class="project-tag">Cloudflare R2</span>
+                        <span class="project-tag">Cloudflare Workers</span>
+                        <span class="project-tag">PBKDF2</span>
+                        <span class="project-tag">GitHub CI/CD</span>
+                    </div>
+                </header>
+
+                <!-- Project Content -->
+                <div class="project-content">
+                    <h2>Overview</h2>
+                    <p>TEC Talent Pool Management System is a comprehensive platform designed to manage and showcase TEC's in-house graduate talent. Built entirely on Cloudflare's infrastructure, this fully cloud-based system requires no local database dependencies. All data is stored on Cloudflare D1 Database, images on Cloudflare R2, and compute runs on Cloudflare Workers/Pages. The system features automatic deployments via GitHub integration, CI/CD pipelines, and preview deployments for pull requests.</p>
+                    
+                    <h2>Project Goals</h2>
+                    <ul>
+                        <li>☁️ Cloud-Only Architecture — Fully cloud-based with no local database dependencies</li>
+                        <li>👥 Talent Management — Comprehensive candidate directory with filtering and search</li>
+                        <li>📊 Admin Dashboard — Secure login system for staff to manage candidates with full CRUD operations</li>
+                        <li>🖼️ Image Management — Upload and store candidate photos and certificates in Cloudflare R2</li>
+                        <li>🔔 Notification System — Real-time announcements with filtering and last updated tracking</li>
+                        <li>🌙 Dark/Light Mode — Theme toggle for better user experience</li>
+                        <li>📱 Responsive Design — Works seamlessly on all devices</li>
+                        <li>🚀 GitHub Integration — Automatic deployments on every push</li>
+                    </ul>
+                    
+                    <h2>Technical Stack</h2>
+                    
+                    <h3>Frontend</h3>
+                    <ul>
+                        <li><strong>HTML5</strong> - Semantic markup and structure</li>
+                        <li><strong>CSS3</strong> - Modern styling with responsive design</li>
+                        <li><strong>Vanilla JavaScript</strong> - ES6+ features, no framework dependencies</li>
+                    </ul>
+                    
+                    <h3>Backend & Infrastructure</h3>
+                    <ul>
+                        <li><strong>Cloudflare Pages</strong> - Static site hosting with global CDN</li>
+                        <li><strong>Cloudflare Workers</strong> - Serverless edge computing for API endpoints</li>
+                        <li><strong>Cloudflare D1</strong> - SQLite-based distributed database (remote)</li>
+                        <li><strong>Cloudflare R2</strong> - S3-compatible object storage for images</li>
+                        <li><strong>PBKDF2</strong> - Secure password hashing with SHA-256</li>
+                    </ul>
+                    
+                    <h3>Development & Deployment</h3>
+                    <ul>
+                        <li><strong>GitHub</strong> - Version control and repository hosting</li>
+                        <li><strong>Cloudflare Pages Git Integration</strong> - Automatic deployments</li>
+                        <li><strong>CI/CD</strong> - Continuous integration and deployment</li>
+                        <li><strong>Preview Deployments</strong> - Automatic previews for pull requests</li>
+                        <li><strong>Wrangler CLI</strong> - Cloudflare Workers deployment tool</li>
+                    </ul>
+                    
+                    <h2>Cloud-Only Architecture</h2>
+                    <p>This project is fully cloud-based with no local database dependencies:</p>
+                    <ul>
+                        <li>✅ All data stored on <strong>Cloudflare D1 Database</strong> (remote servers)</li>
+                        <li>✅ All images stored on <strong>Cloudflare R2</strong> (object storage)</li>
+                        <li>✅ All compute on <strong>Cloudflare Workers/Pages</strong></li>
+                        <li>✅ <strong>GitHub integration</strong> for automatic deployments</li>
+                        <li>✅ <strong>CI/CD</strong> via Cloudflare Pages Git integration</li>
+                        <li>✅ <strong>Automatic preview deployments</strong> for pull requests</li>
+                        <li>✅ <strong>Bindings managed via wrangler.toml</strong> (no manual configuration needed)</li>
+                    </ul>
+                    
+                    <p><strong>Development server</strong> connects directly to remote Cloudflare services - no local database files needed!</p>
+                    
+                    <h2>Core Features</h2>
+                    
+                    <h3>Public Features</h3>
+                    <ul>
+                        <li><strong>Candidate Directory</strong> - Browse all graduate profiles with filtering and search</li>
+                        <li><strong>Enhanced Profile Pages</strong> - Modern design with detailed candidate information</li>
+                        <li><strong>Skills Section</strong> - Card-based design with icons and animations</li>
+                        <li><strong>Category Filtering</strong> - Filter by engineering discipline</li>
+                        <li><strong>Status Filtering</strong> - Filter by employment status</li>
+                        <li><strong>Search Functionality</strong> - Search across candidate profiles</li>
+                        <li><strong>Dark/Light Mode</strong> - Theme toggle for better user experience</li>
+                        <li><strong>Responsive Design</strong> - Works seamlessly on all devices</li>
+                    </ul>
+                    
+                    <h3>Admin Features</h3>
+                    <ul>
+                        <li><strong>Secure Login System</strong> - Token-based authentication with PBKDF2 password hashing</li>
+                        <li><strong>Admin Dashboard</strong> - Full CRUD operations for candidate management</li>
+                        <li><strong>Image Upload</strong> - Upload and store candidate photos and certificates in Cloudflare R2</li>
+                        <li><strong>Profile Management</strong> - Create, update, and delete candidate profiles</li>
+                        <li><strong>Notification Management</strong> - Create and manage announcements</li>
+                        <li><strong>Admin User Management</strong> - Create and manage admin accounts</li>
+                        <li><strong>Password Management</strong> - Change admin passwords securely</li>
+                    </ul>
+                    
+                    <h3>Notification System</h3>
+                    <ul>
+                        <li>Real-time announcements with filtering</li>
+                        <li>Last updated date display</li>
+                        <li>Clear all notifications functionality</li>
+                        <li>Individual notification deletion</li>
+                    </ul>
+                    
+                    <h2>File Structure</h2>
+                    <pre><code>Talent-Pool/
+├── index.html              # Main landing page
+├── candidate.html          # Individual candidate profile page
+├── admin.html             # Admin login and dashboard
+├── notifications.html     # Notifications page
+├── styles.css             # Main stylesheet
+├── candidate.css          # Candidate page styles
+├── admin.css             # Admin page styles
+├── app.js                # Main application logic
+├── candidate.js          # Candidate page logic
+├── admin.js              # Admin dashboard logic
+├── notifications.js      # Notifications logic
+├── functions/
+│   ├── api/
+│   │   ├── candidates.js         # Candidates list/create endpoint
+│   │   ├── candidates/[id].js    # Individual candidate CRUD
+│   │   ├── admin/
+│   │   │   ├── login.js          # Admin authentication
+│   │   │   ├── verify.js         # Token verification
+│   │   │   ├── change-password.js # Password management
+│   │   │   └── admins.js         # Admin user management
+│   │   ├── notifications.js      # Notifications list/clear
+│   │   ├── notifications/[id].js # Individual notification
+│   │   ├── upload.js             # Image upload to R2
+│   │   └── images/[[path]].js    # Image serving from R2
+│   └── utils/
+│       ├── auth.js               # Authentication utilities
+│       └── password.js           # Password hashing/validation
+├── wrangler.toml         # Cloudflare configuration
+└── package.json          # Node.js dependencies</code></pre>
+                    
+                    <h2>Architecture Overview</h2>
+                    <p>The system follows a cloud-only architecture with all services running on Cloudflare's edge network. The frontend is hosted on Cloudflare Pages, API endpoints run on Cloudflare Workers, data is stored in Cloudflare D1, and media files are stored in Cloudflare R2. Bindings are automatically configured via wrangler.toml, eliminating the need for manual configuration.</p>
+                    
+                    <h3>Request Flow</h3>
+                    <ul>
+                        <li><strong>Public Candidate View</strong>: index.html → Cloudflare Pages → API endpoint → D1 Database → Display candidates</li>
+                        <li><strong>Candidate Profile</strong>: candidate.html?id=X → API endpoint → D1 Database → Display profile</li>
+                        <li><strong>Admin Login</strong>: admin.html → /api/admin/login → Token validation → Dashboard access</li>
+                        <li><strong>Image Upload</strong>: Drag & Drop → /api/upload → R2 Storage → URL Returned</li>
+                        <li><strong>Image Serving</strong>: /api/images/* → R2 Storage → Display image</li>
+                    </ul>
+                    
+                    <h2>API Endpoints</h2>
+                    
+                    <h3>Public Endpoints</h3>
+                    <ul>
+                        <li><code>GET /api/candidates</code> - Get all candidates</li>
+                        <li><code>GET /api/candidates/:id</code> - Get a specific candidate</li>
+                        <li><code>GET /api/notifications</code> - Get all notifications</li>
+                        <li><code>GET /api/images/*</code> - Serve images from R2 storage</li>
+                    </ul>
+                    
+                    <h3>Protected Endpoints (Require Admin Token)</h3>
+                    
+                    <h4>Candidate Management</h4>
+                    <ul>
+                        <li><code>POST /api/candidates</code> - Create a new candidate</li>
+                        <li><code>PUT /api/candidates/:id</code> - Update a candidate</li>
+                        <li><code>DELETE /api/candidates/:id</code> - Delete a candidate</li>
+                    </ul>
+                    
+                    <h4>Image Management</h4>
+                    <ul>
+                        <li><code>POST /api/upload</code> - Upload image to R2 (profile pictures, certificates)</li>
+                    </ul>
+                    
+                    <h4>Admin Management</h4>
+                    <ul>
+                        <li><code>POST /api/admin/login</code> - Admin login</li>
+                        <li><code>GET /api/admin/verify</code> - Verify admin token</li>
+                        <li><code>POST /api/admin/change-password</code> - Change admin password</li>
+                        <li><code>GET /api/admin/admins</code> - List all admins</li>
+                        <li><code>POST /api/admin/admins</code> - Create new admin</li>
+                        <li><code>PUT /api/admin/admins/:id</code> - Update admin</li>
+                        <li><code>DELETE /api/admin/admins/:id</code> - Delete admin</li>
+                    </ul>
+                    
+                    <h4>Notification Management</h4>
+                    <ul>
+                        <li><code>DELETE /api/notifications</code> - Clear all notifications</li>
+                        <li><code>DELETE /api/notifications/:id</code> - Delete single notification</li>
+                    </ul>
+                    
+                    <h2>Candidate Data Structure</h2>
+                    <p>Each candidate profile includes comprehensive information:</p>
+                    <ul>
+                        <li><strong>Basic Information</strong>: Name, category, status, profile picture</li>
+                        <li><strong>Contact Details</strong>: Email, phone, LinkedIn, portfolio, location</li>
+                        <li><strong>Personal Details</strong>: Date of birth, languages, expected salary, availability date</li>
+                        <li><strong>Employment Status</strong>: Current employment status and availability</li>
+                        <li><strong>Skills</strong>: Array of technical and professional skills</li>
+                        <li><strong>Education</strong>: Academic background with institutions, degrees, and periods</li>
+                        <li><strong>Experience</strong>: Work experience with companies, positions, and descriptions</li>
+                        <li><strong>Projects</strong>: Personal and professional projects with technologies used</li>
+                        <li><strong>Certifications</strong>: Professional certifications with images</li>
+                        <li><strong>Awards</strong>: Achievements and recognitions</li>
+                    </ul>
+                    
+                    <h3>Categories</h3>
+                    <ul>
+                        <li>Telecommunication Engineering</li>
+                        <li>Computer Science Engineering</li>
+                        <li>Mechanical Engineering</li>
+                        <li>Electronic Engineering</li>
+                        <li>Electrical Engineering</li>
+                    </ul>
+                    
+                    <h3>Status Options</h3>
+                    <ul>
+                        <li>Ready to Work</li>
+                        <li>Employed</li>
+                        <li>New</li>
+                    </ul>
+                    
+                    <h2>Getting Started</h2>
+                    
+                    <h3>Prerequisites</h3>
+                    <ul>
+                        <li>Node.js and npm</li>
+                        <li>Cloudflare account with access to D1, R2, and Pages</li>
+                        <li>Wrangler CLI (<code>npm install -g wrangler</code>)</li>
+                        <li>GitHub account (for CI/CD integration)</li>
+                    </ul>
+                    
+                    <h3>Setup Instructions</h3>
+                    
+                    <h4>1. Install Dependencies</h4>
+                    <pre><code>npm install</code></pre>
+                    
+                    <h4>2. Configure Cloudflare Services</h4>
+                    <pre><code># Authenticate with Cloudflare
+npx wrangler login
+
+# Verify authentication
+npx wrangler whoami
+
+# Create D1 database (if not exists)
+npx wrangler d1 create tec-talent-pool-db
+
+# Create R2 bucket (if not exists)
+npx wrangler r2 bucket create tec-talent-pool-images
+
+# Migrate database schema to remote D1 database
+npm run migrate
+
+# Create admin account in remote database
+npm run add-admin admin YourSecurePassword123!
+
+# Verify setup
+npm run verify</code></pre>
+                    
+                    <h4>3. Connect to GitHub (Recommended)</h4>
+                    <pre><code># Push code to GitHub
+git init
+git add .
+git commit -m "Initial commit"
+git remote add origin https://github.com/your-username/your-repo-name.git
+git push -u origin main</code></pre>
+                    
+                    <p>Then connect GitHub to Cloudflare Pages in the Cloudflare Dashboard. Bindings are automatically configured from <code>wrangler.toml</code> - no manual setup needed!</p>
+                    
+                    <h4>4. Development Server</h4>
+                    <pre><code># Start development server (connects to remote Cloudflare D1 database)
+npm run dev
+
+# Clean restart (if issues)
+npm run dev:clean</code></pre>
+                    
+                    <p><strong>Note:</strong> The development server connects directly to the remote Cloudflare database. All data operations use cloud services. You need an internet connection.</p>
+                    
+                    <h2>Deployment</h2>
+                    
+                    <h3>Automatic Deployment (Recommended)</h3>
+                    <p>Connect GitHub repository to Cloudflare Pages for automatic deployments:</p>
+                    <ul>
+                        <li>Every push to <code>main</code> branch automatically deploys</li>
+                        <li>Preview deployments for pull requests</li>
+                        <li>Bindings automatically configured from <code>wrangler.toml</code></li>
+                    </ul>
+                    
+                    <h3>Manual Deployment</h3>
+                    <pre><code>npm run deploy</code></pre>
+                    
+                    <h2>Security Features</h2>
+                    <ul>
+                        <li>✅ <strong>Secure Password Hashing</strong> - PBKDF2 with SHA-256</li>
+                        <li>✅ <strong>Password Strength Validation</strong> - Enforced by system</li>
+                        <li>✅ <strong>Token-Based Authentication</strong> - Secure admin access</li>
+                        <li>✅ <strong>SQL Injection Prevention</strong> - Parameterized queries</li>
+                        <li>✅ <strong>Input Validation</strong> - On all endpoints</li>
+                        <li>✅ <strong>File Upload Validation</strong> - Type and size checks</li>
+                        <li>✅ <strong>HTTPS Only</strong> - Enforced by Cloudflare</li>
+                    </ul>
+                    
+                    <h2>Key Design Patterns</h2>
+                    <ul>
+                        <li><strong>Cloud-Only Architecture</strong> - No local dependencies, all services on Cloudflare</li>
+                        <li><strong>Serverless Functions</strong> - Cloudflare Pages Functions for API endpoints</li>
+                        <li><strong>RESTful API</strong> - Standard HTTP methods and status codes</li>
+                        <li><strong>Token-Based Authentication</strong> - Secure admin access</li>
+                        <li><strong>Component-Based Frontend</strong> - Modular JavaScript architecture</li>
+                        <li><strong>Configuration-Driven</strong> - Bindings managed via wrangler.toml</li>
+                    </ul>
+                    
+                    <h2>Lessons Learned</h2>
+                    <ul>
+                        <li>Understanding cloud-only architecture with Cloudflare services</li>
+                        <li>Learning to work with Cloudflare D1 distributed database</li>
+                        <li>Implementing secure password hashing with PBKDF2</li>
+                        <li>Building image upload and serving with Cloudflare R2</li>
+                        <li>Setting up GitHub CI/CD with Cloudflare Pages</li>
+                        <li>Managing bindings via wrangler.toml configuration</li>
+                        <li>Creating comprehensive admin dashboards</li>
+                        <li>Implementing notification systems</li>
+                    </ul>
+                    
+                    <h2>GitHub Commit History</h2>
+                    <p>Development timeline showing key commits and milestones during the project lifecycle.</p>
+                    
+                    <div class="commit-history">
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">ed2e121</span>
+                                <span class="commit-date">Dec 23, 2025</span>
+                            </div>
+                            <div class="commit-message">Refactor candidate profile layout in candidate.js: Improve HTML structure for better readability and maintainability, adjust CSS styles in candidate.css for consistent alignment, and refine hero section</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed 31 minutes ago</p>
+                                <div class="commit-stats">
+                                    <span class="stat">1/1</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">cc87e74</span>
+                                <span class="commit-date">Dec 23, 2025</span>
+                            </div>
+                            <div class="commit-message">Refine hero section styles in notifications.css: Adjust padding and font sizes for better layout and responsiveness on various screen sizes</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed 41 minutes ago</p>
+                                <div class="commit-stats">
+                                    <span class="stat">1/1</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">d187f88</span>
+                                <span class="commit-date">Dec 23, 2025</span>
+                            </div>
+                            <div class="commit-message">Update hero section styles in notifications.css: Adjust padding and font sizes for improved layout and responsiveness across different screen sizes</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed 49 minutes ago</p>
+                                <div class="commit-stats">
+                                    <span class="stat">1/1</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">0243ada</span>
+                                <span class="commit-date">Dec 23, 2025</span>
+                            </div>
+                            <div class="commit-message">Add search and filter functionality in admin panel: Introduce a search input and status filter for candidates, along with corresponding styles and JavaScript logic to enhance candidate management experience</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed 1 hour ago</p>
+                                <div class="commit-stats">
+                                    <span class="stat">1/1</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">e372d42</span>
+                                <span class="commit-date">Dec 22, 2025</span>
+                            </div>
+                            <div class="commit-message">Add status-ready-to-work class in styles.css: Introduce new styling for the ready-to-work status with light and dark mode support for improved visual representation</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed 17 hours ago</p>
+                                <div class="commit-stats">
+                                    <span class="stat">1/1</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">5d06001</span>
+                                <span class="commit-date">Dec 22, 2025</span>
+                            </div>
+                            <div class="commit-message">Refactor candidate card styles in styles.css: Update dimensions, padding, and hover effects for improved aesthetics and responsiveness. Introduce new gradient background for dark mode and enhance animations</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed 18 hours ago</p>
+                                <div class="commit-stats">
+                                    <span class="stat">1/1</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">82de3a8</span>
+                                <span class="commit-date">Dec 22, 2025</span>
+                            </div>
+                            <div class="commit-message">Adjust font size for candidate info headers in styles.css: Decrease font size from 1.375rem to 1.125rem for improved readability</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed 18 hours ago</p>
+                                <div class="commit-stats">
+                                    <span class="stat">1/1</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">62e8d84</span>
+                                <span class="commit-date">Dec 22, 2025</span>
+                            </div>
+                            <div class="commit-message">Enhance status badge styling in candidate.css: Add new status-ready-to-work class for improved visual representation and dark mode support</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed 18 hours ago</p>
+                                <div class="commit-stats">
+                                    <span class="stat">1/1</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">47d29b2</span>
+                                <span class="commit-date">Dec 22, 2025</span>
+                            </div>
+                            <div class="commit-message">Add status badge styling in candidate.css and update candidate.js for status display</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed 19 hours ago</p>
+                                <div class="commit-stats">
+                                    <span class="stat">1/1</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">269a451</span>
+                                <span class="commit-date">Dec 22, 2025</span>
+                            </div>
+                            <div class="commit-message">Refine profile header styling in candidate.css: Center align items, adjust padding, and set minimum heights for improved layout and visual consistency</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed 19 hours ago</p>
+                                <div class="commit-stats">
+                                    <span class="stat">1/1</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">c2d4ebe</span>
+                                <span class="commit-date">Dec 22, 2025</span>
+                            </div>
+                            <div class="commit-message">Enhance cert-image styling in candidate.css: Increase dimensions, adjust border radius, add border and box shadow for improved visual appeal, and change image fit to contain for better image presentation</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed 19 hours ago</p>
+                                <div class="commit-stats">
+                                    <span class="stat">1/1</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">f381b7e</span>
+                                <span class="commit-date">Dec 22, 2025</span>
+                            </div>
+                            <div class="commit-message">Implement sidebar skills section in candidate profile: Introduce a modern card layout for skills with responsive design, improved styling, and dark/light mode support</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed 19 hours ago</p>
+                                <div class="commit-stats">
+                                    <span class="stat">1/1</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">a2002ed</span>
+                                <span class="commit-date">Dec 22, 2025</span>
+                            </div>
+                            <div class="commit-message">Revamp candidate profile page to a LinkedIn-inspired layout: Introduce modern design elements, reorganize sections for better flow, and enhance responsiveness with a sidebar for contact and details</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed 19 hours ago</p>
+                                <div class="commit-stats">
+                                    <span class="stat">1/1</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">0a3d778</span>
+                                <span class="commit-date">Dec 22, 2025</span>
+                            </div>
+                            <div class="commit-message">Update README.md with latest project information, features, API endpoints, and current status</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed 19 hours ago</p>
+                                <div class="commit-stats">
+                                    <span class="stat">1/1</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">fb53211</span>
+                                <span class="commit-date">Dec 22, 2025</span>
+                            </div>
+                            <div class="commit-message">Complete redesign of candidate profile page: Modern, clean, professional design with full dark/light mode support, enhanced animations, and improved visual hierarchy</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed 19 hours ago</p>
+                                <div class="commit-stats">
+                                    <span class="stat">1/1</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">6efdb3c</span>
+                                <span class="commit-date">Dec 22, 2025</span>
+                            </div>
+                            <div class="commit-message">Redesign candidate profile page with enhanced dark/light mode support, improved spacing, modern aesthetics, and smooth theme transitions</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed 19 hours ago</p>
+                                <div class="commit-stats">
+                                    <span class="stat">1/1</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">06c513d</span>
+                                <span class="commit-date">Dec 22, 2025</span>
+                            </div>
+                            <div class="commit-message">Update floating icon in index.html to replace book icon with plant icon for enhanced thematic representation</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed 20 hours ago</p>
+                                <div class="commit-stats">
+                                    <span class="stat">1/1</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">a8f3b2c</span>
+                                <span class="commit-date">Dec 22, 2025</span>
+                            </div>
+                            <div class="commit-message">Enhance skills section design: Move after About section, add modern card-based layout with icons, animations, and improved styling</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed 20 hours ago</p>
+                                <div class="commit-stats">
+                                    <span class="stat">1/1</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h2>Challenges & Solutions</h2>
+                    <p>Developing TEC Talent Pool involved several technical challenges to ensure a secure, scalable, and cloud-native application.</p>
+                    
+                    <h3>Challenge: Cloud-Only Architecture</h3>
+                    <p>Building a fully cloud-based system with no local database dependencies while maintaining development efficiency.</p>
+                    
+                    <h4>Solution</h4>
+                    <ul>
+                        <li>Used Cloudflare D1 for remote database storage</li>
+                        <li>Configured development server to connect directly to remote services</li>
+                        <li>Managed all bindings via wrangler.toml for consistency</li>
+                        <li>Implemented automatic deployments via GitHub integration</li>
+                        <li>Created preview deployments for testing</li>
+                    </ul>
+                    
+                    <p><strong>Result:</strong> Fully cloud-based system with seamless development workflow.</p>
+                    
+                    <h3>Challenge: Image Management</h3>
+                    <p>Handling image uploads, storage, and serving in a serverless environment.</p>
+                    
+                    <h4>Solution</h4>
+                    <ul>
+                        <li>Used Cloudflare R2 for object storage</li>
+                        <li>Created upload endpoint with validation</li>
+                        <li>Implemented image serving via Cloudflare Pages Functions</li>
+                        <li>Organized images by type (profile, certificate) in R2 buckets</li>
+                        <li>Added proper CORS configuration for image access</li>
+                    </ul>
+                    
+                    <p><strong>Result:</strong> Efficient image management with CDN benefits.</p>
+                    
+                    <h3>Challenge: Secure Authentication</h3>
+                    <p>Implementing secure password storage and token-based authentication in a serverless environment.</p>
+                    
+                    <h4>Solution</h4>
+                    <ul>
+                        <li>Used PBKDF2 with SHA-256 for password hashing</li>
+                        <li>Implemented password strength validation</li>
+                        <li>Created token-based authentication system</li>
+                        <li>Added token verification on protected endpoints</li>
+                        <li>Implemented secure password change functionality</li>
+                    </ul>
+                    
+                    <p><strong>Result:</strong> Secure authentication system with industry-standard practices.</p>
+                </div>
+
+                <!-- Project Footer -->
+                <footer class="project-footer">
+                    <div class="project-links">
+                        <a href="https://talent-pool.pages.dev/" target="_blank" rel="noopener noreferrer" class="project-link">🌐 Live Web-System</a>
+                    </div>
+                    <a href="../index.html" class="back-link">← View All Projects</a>
+                </footer>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer" id="dynamic-footer">
+        <!-- Footer will be dynamically loaded -->
+    </footer>
+
+    <script src="../components.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>
+

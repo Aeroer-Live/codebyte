@@ -50,6 +50,18 @@ const projects = [
             { text: 'View Documentation', url: '#' },
             { text: 'Learn More', url: '#' }
         ]
+    },
+    {
+        id: 'tec-talent-pool',
+        title: 'TEC Talent Pool',
+        category: 'Management System',
+        date: '2025-11-15',
+        description: 'A comprehensive Talent Pool Management System for TEC\'s in-house graduates, built with HTML, CSS, JavaScript, and Cloudflare Workers/Pages. Fully cloud-based with no local database dependencies.',
+        tags: ['Cloudflare Pages', 'Cloudflare D1', 'Cloudflare R2', 'Cloudflare Workers', 'PBKDF2', 'GitHub CI/CD' ],
+        links: [
+            { text: 'View Documentation', url: '#' },
+            { text: 'Learn More', url: '#' }
+        ]
     }
 ];
 
@@ -101,7 +113,8 @@ function navigateToProject(projectId) {
         'note-lab': 'projects/note-lab.html',
         'task-lab': 'projects/task-lab.html',
         'build-learn-deploy': 'projects/build-learn-deploy.html',
-        'news-portal-system': 'projects/news-portal-system.html'
+        'news-portal-system': 'projects/news-portal-system.html',
+        'tec-talent-pool': 'projects/tec-talent-pool.html'
     };
     
     const fileName = projectFileMap[projectId];
