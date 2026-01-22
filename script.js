@@ -62,6 +62,18 @@ const projects = [
             { text: 'View Documentation', url: '#' },
             { text: 'Learn More', url: '#' }
         ]
+    },
+    {
+        id: 'python-programming-fundamentals',
+        title: 'Python Programming Fundamentals',
+        category: 'Educational Platform',
+        date: '2025-12-20',
+        description: 'A comprehensive, interactive 3-day Python programming course website with detailed content, code breakdowns, quizzes, authentication system, and development tools guide.',
+        tags: ['HTML5', 'CSS3', 'JavaScript', 'Prism.js', 'Educational', 'Static Site' ],
+        links: [
+            { text: 'View Documentation', url: '#' },
+            { text: 'Learn More', url: '#' }
+        ]
     }
 ];
 
@@ -114,7 +126,8 @@ function navigateToProject(projectId) {
         'task-lab': 'projects/task-lab.html',
         'build-learn-deploy': 'projects/build-learn-deploy.html',
         'news-portal-system': 'projects/news-portal-system.html',
-        'tec-talent-pool': 'projects/tec-talent-pool.html'
+        'tec-talent-pool': 'projects/tec-talent-pool.html',
+        'python-programming-fundamentals': 'projects/python-programming-fundamentals.html'
     };
     
     const fileName = projectFileMap[projectId];
