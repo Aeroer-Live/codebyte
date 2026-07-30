@@ -74,6 +74,30 @@ const projects = [
             { text: 'View Documentation', url: '#' },
             { text: 'Learn More', url: '#' }
         ]
+    },
+    {
+        id: 'starthink-crm',
+        title: 'StarThink CRM',
+        category: 'CRM Platform',
+        date: '2026-07-06',
+        description: 'A full-stack CRM built for creative agencies — managing clients, projects, workflows, and team collaboration. Deployed entirely on Cloudflare\'s edge infrastructure.',
+        tags: ['React 18', 'Vite 6', 'Tailwind CSS v4', 'Cloudflare Workers', 'Cloudflare D1', 'TanStack Query' ],
+        links: [
+            { text: 'Live App', url: 'https://starthink-crm.pages.dev' },
+            { text: 'Live API', url: 'https://starthink-crm-api.starthinkmy.workers.dev' }
+        ]
+    },
+    {
+        id: 'business-health-check',
+        title: 'Business Health Check',
+        category: 'Assessment Platform',
+        date: '2026-07-08',
+        description: 'An interactive assessment tool that scores a business\'s digital presence, marketing, and growth readiness across 10 categories, then generates a scored report (web + downloadable PDF) with strengths, weaknesses, and admin-configurable recommendations. Built as a lead-gen tool for StarThink.',
+        tags: ['React 19', 'TypeScript', 'Tailwind CSS v4', 'Cloudflare Workers', 'Cloudflare D1', 'PDF Generation' ],
+        links: [
+            { text: 'Live Site', url: 'https://bhc-web.starthinkmy.workers.dev' },
+            { text: 'Live API', url: 'https://bhc-worker.starthinkmy.workers.dev' }
+        ]
     }
 ];
 
@@ -127,7 +151,9 @@ function navigateToProject(projectId) {
         'build-learn-deploy': 'projects/build-learn-deploy.html',
         'news-portal-system': 'projects/news-portal-system.html',
         'tec-talent-pool': 'projects/tec-talent-pool.html',
-        'python-programming-fundamentals': 'projects/python-programming-fundamentals.html'
+        'python-programming-fundamentals': 'projects/python-programming-fundamentals.html',
+        'starthink-crm': 'projects/starthink-crm.html',
+        'business-health-check': 'projects/business-health-check.html'
     };
     
     const fileName = projectFileMap[projectId];

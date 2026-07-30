@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="StarThink CRM - A full-stack CRM built for creative agencies, managing clients, projects, workflows, and team collaboration. Built with React, Cloudflare Workers, and Cloudflare D1, deployed entirely on Cloudflare's edge infrastructure.">
+    <meta name="keywords" content="CRM, customer relationship management, creative agency software, Cloudflare Workers, Cloudflare D1, React, Hono, project management, workflow automation, SaaS">
+    <meta name="author" content="Mohammed Asif">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://codebyte.aeroer.live/projects/starthink-crm.html">
+    <meta property="og:title" content="StarThink CRM - CodingLog">
+    <meta property="og:description" content="A full-stack CRM built for creative agencies, managing clients, projects, workflows, and team collaboration. Deployed entirely on Cloudflare's edge infrastructure.">
+    <meta property="og:site_name" content="CodingLog">
+    <meta property="article:published_time" content="2026-07-06T00:00:00+00:00">
+    <meta property="article:author" content="Mohammed Asif">
+    <meta property="article:tag" content="Cloudflare">
+    <meta property="article:tag" content="CRM">
+    <meta property="article:tag" content="SaaS">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://codebyte.aeroer.live/projects/starthink-crm.html">
+    <meta name="twitter:title" content="StarThink CRM">
+    <meta name="twitter:description" content="A full-stack CRM for creative agencies, built with React, Cloudflare Workers, and Cloudflare D1.">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://codebyte.aeroer.live/projects/starthink-crm.html">
+
+    <title>StarThink CRM - CodingLog</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="alternate icon" href="../favicon.svg">
+    <link rel="stylesheet" href="../styles.css">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "StarThink CRM",
+      "description": "A full-stack CRM built for creative agencies, managing clients, projects, workflows, and team collaboration, deployed entirely on Cloudflare's edge infrastructure.",
+      "author": {
+        "@type": "Person",
+        "name": "Mohammed Asif"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "CodingLog"
+      },
+      "datePublished": "2026-07-06",
+      "dateModified": "2026-07-06",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://codebyte.aeroer.live/projects/starthink-crm.html"
+      },
+      "keywords": "CRM, Cloudflare, SaaS, React, Marketing Operations",
+      "about": {
+        "@type": "Thing",
+        "name": "CRM & Marketing Operations"
+      }
+    }
+    </script>
+</head>
+<body>
+    <header class="header" id="dynamic-header">
+        <!-- Header will be dynamically loaded -->
+    </header>
+
+    <main class="main">
+        <article class="project-article">
+            <div class="container">
+                <!-- Project Header -->
+                <header class="project-header">
+                    <div class="project-meta">
+                        <span class="project-category">CRM Platform [ Creative Agency Operations ]</span>
+                        <span class="project-date">July 6, 2026</span>
+                    </div>
+                    <h1 class="project-title">StarThink CRM</h1>
+                    <p class="project-description">A full-stack CRM built for creative agencies — managing clients, projects, workflows, and team collaboration. Deployed entirely on Cloudflare's edge infrastructure.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">React 18</span>
+                        <span class="project-tag">Vite 6</span>
+                        <span class="project-tag">Tailwind CSS v4</span>
+                        <span class="project-tag">Cloudflare Workers</span>
+                        <span class="project-tag">Cloudflare D1</span>
+                        <span class="project-tag">TanStack Query</span>
+                    </div>
+                </header>
+
+                <!-- Project Content -->
+                <div class="project-content">
+                    <h2>Overview</h2>
+                    <p>StarThink CRM is a full-stack customer relationship management platform purpose-built for creative agencies. It brings client management, project tracking, creative and content production workflows, advertising campaigns, and team collaboration into a single system. The entire stack runs on Cloudflare's edge network — a React frontend served from Cloudflare Pages and a Hono-based API running on Cloudflare Workers backed by a D1 (SQLite) database — giving the platform global low-latency access with no traditional server infrastructure to manage.</p>
+
+                    <h2>Project Goals</h2>
+                    <ul>
+                        <li>🗂️ Client Lifecycle Management — Create, edit, deactivate, and delete client records</li>
+                        <li>📁 Project Tracking — Members, milestones, and status tracking per project</li>
+                        <li>🎬 Creative & Content Workflows — Production shoots, edit tasks, and a full content pipeline from idea to published</li>
+                        <li>🧑‍💻 Task Boards — Dedicated web development and graphic design task boards per project</li>
+                        <li>📢 Advertising Tracking — Ad account and campaign tracking</li>
+                        <li>📅 Unified Calendar — Cross-module event calendar</li>
+                        <li>🔐 Role-Based Access — Eleven distinct roles, from admin down to client portal users</li>
+                        <li>🧾 Audit Trail — Full activity audit logging across the system</li>
+                        <li>🔔 Real-Time Notifications — In-app notifications for team members</li>
+                    </ul>
+
+                    <h2>Technical Stack</h2>
+
+                    <h3>Frontend</h3>
+                    <ul>
+                        <li><strong>React 18</strong> - Component-based UI</li>
+                        <li><strong>Vite 6</strong> - Build tool and dev server</li>
+                        <li><strong>Tailwind CSS v4</strong> - Utility-first styling, configured via <code>@import "tailwindcss"</code> with no <code>tailwind.config.ts</code> needed</li>
+                        <li><strong>React Router v6</strong> - Client-side routing</li>
+                        <li><strong>TanStack Query v5</strong> - Server state and data fetching</li>
+                        <li><strong>Recharts</strong> - Dashboard charts</li>
+                        <li><strong>Lucide React</strong> - Icon set</li>
+                    </ul>
+
+                    <h3>API & Backend</h3>
+                    <ul>
+                        <li><strong>Cloudflare Workers</strong> - Serverless edge compute for the API</li>
+                        <li><strong>Hono v4</strong> - Lightweight web framework for the Worker API</li>
+                        <li><strong>JWT (HS256)</strong> - Authentication with refresh tokens</li>
+                    </ul>
+
+                    <h3>Database & Hosting</h3>
+                    <ul>
+                        <li><strong>Cloudflare D1</strong> - SQLite-based distributed database</li>
+                        <li><strong>Cloudflare Pages</strong> - Frontend hosting</li>
+                        <li><strong>Cloudflare Workers</strong> - API hosting</li>
+                    </ul>
+
+                    <h2>Monorepo Structure</h2>
+                    <pre><code>starthink-crm/
+├── apps/
+│   ├── web/          # React + Vite frontend
+│   └── worker/       # Cloudflare Worker API (Hono)
+├── packages/
+│   └── shared/       # Shared TypeScript types & constants
+├── package.json      # npm workspaces root
+└── README.md</code></pre>
+
+                    <h2>Core Modules</h2>
+                    <ul>
+                        <li><strong>Dashboard</strong> - KPI stats, charts, recent activity, upcoming deadlines</li>
+                        <li><strong>Clients</strong> - Full client lifecycle: create, edit, deactivate, delete</li>
+                        <li><strong>Projects</strong> - Project management with members, milestones, status tracking</li>
+                        <li><strong>Creative Workflow</strong> - Production shoots and edit tasks with multi-assignee support</li>
+                        <li><strong>Content Workflow</strong> - Content items moving through a full pipeline, from idea to published</li>
+                        <li><strong>Web Dev Tasks</strong> - Developer task board per project</li>
+                        <li><strong>Graphic Design Tasks</strong> - Design task board per project</li>
+                        <li><strong>Advertising</strong> - Ad account and campaign tracking</li>
+                        <li><strong>Calendar</strong> - Cross-module event calendar</li>
+                        <li><strong>Team</strong> - User management for in-house team and client users</li>
+                        <li><strong>Requests</strong> - Client request inbox</li>
+                        <li><strong>Audit Logs</strong> - Full activity audit trail</li>
+                        <li><strong>Notifications</strong> - Real-time in-app notifications</li>
+                    </ul>
+
+                    <h2>Roles & Permissions</h2>
+                    <ul>
+                        <li><strong>admin</strong> - Full access to everything</li>
+                        <li><strong>hr</strong> - Clients, Projects, Team, Dashboard</li>
+                        <li><strong>project_manager</strong> - Projects, Clients (create/edit), workflows</li>
+                        <li><strong>team_member</strong> - Dashboard, assigned projects, creative & content workflows</li>
+                        <li><strong>videographer</strong> - Creative workflow</li>
+                        <li><strong>editor</strong> - Creative workflow</li>
+                        <li><strong>content_strategist</strong> - Content workflow</li>
+                        <li><strong>marketer</strong> - Content workflow, Advertising</li>
+                        <li><strong>web_developer</strong> - Web Dev workflow</li>
+                        <li><strong>graphic_designer</strong> - Graphic Design workflow</li>
+                        <li><strong>client</strong> - Client portal: their own projects and requests only</li>
+                    </ul>
+
+                    <h2>Getting Started</h2>
+
+                    <h3>Prerequisites</h3>
+                    <ul>
+                        <li>Node.js 18+</li>
+                        <li>Wrangler CLI (<code>npm i -g wrangler</code>)</li>
+                        <li>A Cloudflare account</li>
+                    </ul>
+
+                    <h3>1. Install Dependencies</h3>
+                    <pre><code>npm install</code></pre>
+
+                    <h3>2. Provision the D1 Database</h3>
+                    <pre><code>wrangler d1 create starthink-crm</code></pre>
+                    <p>Copy the <code>database_id</code> from the output and paste it into <code>apps/worker/wrangler.toml</code>.</p>
+
+                    <h3>3. Run Database Migrations</h3>
+                    <p>Apply the schema and all migrations in order:</p>
+                    <pre><code>wrangler d1 execute starthink-crm --local --file=apps/worker/src/db/schema.sql
+wrangler d1 execute starthink-crm --local --file=apps/worker/src/db/projects.sql
+wrangler d1 execute starthink-crm --local --file=apps/worker/src/db/creative.sql
+wrangler d1 execute starthink-crm --local --file=apps/worker/src/db/content.sql
+wrangler d1 execute starthink-crm --local --file=apps/worker/src/db/clients.sql
+wrangler d1 execute starthink-crm --local --file=apps/worker/src/db/ads.sql
+wrangler d1 execute starthink-crm --local --file=apps/worker/src/db/audit.sql
+wrangler d1 execute starthink-crm --local --file=apps/worker/src/db/milestones.sql
+wrangler d1 execute starthink-crm --local --file=apps/worker/src/db/dev_tasks.sql
+wrangler d1 execute starthink-crm --local --file=apps/worker/src/db/design_tasks.sql
+wrangler d1 execute starthink-crm --local --file=apps/worker/src/db/client_requests.sql
+wrangler d1 execute starthink-crm --local --file=apps/worker/src/db/client_portal.sql
+wrangler d1 execute starthink-crm --local --file=apps/worker/src/db/add_assignee_ids.sql</code></pre>
+
+                    <h3>4. Start Local Development</h3>
+                    <p>Run the API and frontend in separate terminals:</p>
+                    <pre><code># API — http://localhost:8787
+npm run dev:worker
+
+# Frontend — http://localhost:3000
+npm run dev:web</code></pre>
+                    <p>The frontend proxies <code>/api/*</code> to <code>http://localhost:8787</code> via Vite's proxy config.</p>
+
+                    <h2>Dev Commands</h2>
+                    <pre><code>npm run dev:web        # Start frontend dev server
+npm run dev:worker     # Start worker dev server
+npm run build:web      # Build frontend for production
+npm run lint           # ESLint
+npm run format         # Prettier
+npm run type-check     # TypeScript type check (all packages)</code></pre>
+
+                    <h2>Deployment</h2>
+
+                    <h3>Deploy API (Cloudflare Workers)</h3>
+                    <pre><code>npm run deploy:worker
+# or
+npx wrangler deploy --config apps/worker/wrangler.toml</code></pre>
+
+                    <h3>Deploy Frontend (Cloudflare Pages)</h3>
+                    <pre><code>npm run deploy:web
+# or
+npm run build:web && npx wrangler pages deploy apps/web/dist --project-name starthink-crm</code></pre>
+
+                    <h3>Live URLs</h3>
+                    <ul>
+                        <li><strong>Frontend</strong> - <a href="https://starthink-crm.pages.dev" target="_blank" rel="noopener noreferrer">starthink-crm.pages.dev</a></li>
+                        <li><strong>API</strong> - <a href="https://starthink-crm-api.starthinkmy.workers.dev" target="_blank" rel="noopener noreferrer">starthink-crm-api.starthinkmy.workers.dev</a></li>
+                    </ul>
+
+                    <h2>Key Conventions</h2>
+                    <ul>
+                        <li>All shared TypeScript types live in <code>packages/shared/src/types/</code></li>
+                        <li>Worker routes follow <code>/api/&lt;resource&gt;</code> (e.g. <code>/api/clients</code>, <code>/api/projects</code>)</li>
+                        <li>Auth middleware: <code>apps/worker/src/middleware/auth.ts</code></li>
+                        <li>API fetch wrapper: <code>apps/web/src/lib/api.ts</code> — use <code>api.get&lt;T&gt;()</code>, <code>api.post&lt;T&gt;()</code>, etc.</li>
+                        <li>TanStack Query client: <code>apps/web/src/lib/queryClient.ts</code></li>
+                        <li>Tailwind is configured via <code>@import "tailwindcss"</code> in <code>apps/web/src/index.css</code> — no <code>tailwind.config.ts</code> needed</li>
+                        <li>Dark mode via <code>ThemeContext</code> + <code>@custom-variant dark</code> in CSS</li>
+                    </ul>
+
+                    <h2>Environment Variables</h2>
+                    <p>Set in <code>apps/worker/wrangler.toml</code> under <code>[vars]</code>:</p>
+                    <ul>
+                        <li><strong>ENVIRONMENT</strong> - <code>development</code> or <code>production</code></li>
+                        <li><strong>ALLOWED_ORIGINS</strong> - Comma-separated list of allowed CORS origins</li>
+                        <li><strong>JWT_SECRET</strong> - Secret key for signing JWT tokens (set as a Wrangler secret)</li>
+                    </ul>
+                    <p>To set secrets:</p>
+                    <pre><code>wrangler secret put JWT_SECRET --config apps/worker/wrangler.toml</code></pre>
+
+                    <h2>GitHub Commit History</h2>
+                    <p>Development timeline showing key commits and milestones during the project lifecycle.</p>
+
+                    <div class="commit-history">
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">60b1b0a</span>
+                                <span class="commit-date">Jul 6, 2026</span>
+                            </div>
+                            <div class="commit-message">feat: add content feedback tab and API endpoint for feedback threads</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed 3 weeks ago</p>
+                            </div>
+                        </div>
+
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">4eb3cc6</span>
+                                <span class="commit-date">Jul 6, 2026</span>
+                            </div>
+                            <div class="commit-message">feat: add feedback functionality to content items</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed 3 weeks ago</p>
+                            </div>
+                        </div>
+
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">728c69e</span>
+                                <span class="commit-date">Jul 6, 2026</span>
+                            </div>
+                            <div class="commit-message">feat: enhance PortalDeliverablesPage with detailed video and content stages</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed 3 weeks ago</p>
+                            </div>
+                        </div>
+
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">ac66a7a</span>
+                                <span class="commit-date">Jul 6, 2026</span>
+                            </div>
+                            <div class="commit-message">feat: add PortalCalendarPage and integrate into routing</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed 3 weeks ago</p>
+                            </div>
+                        </div>
+
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">6a0d604</span>
+                                <span class="commit-date">Jul 6, 2026</span>
+                            </div>
+                            <div class="commit-message">feat: enhance CreativeWorkflowPage with Content Workflow integration</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed 3 weeks ago</p>
+                            </div>
+                        </div>
+
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">7108875</span>
+                                <span class="commit-date">Jul 3, 2026</span>
+                            </div>
+                            <div class="commit-message">feat: remove redundant user role check in PATCH /items/:id/stage route</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed 27 days ago</p>
+                            </div>
+                        </div>
+
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">7e146b7</span>
+                                <span class="commit-date">Jun 30, 2026</span>
+                            </div>
+                            <div class="commit-message">feat: add comprehensive README.md for project overview, tech stack, and setup instructions</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed last month</p>
+                            </div>
+                        </div>
+
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">76c7972</span>
+                                <span class="commit-date">Jun 22, 2026</span>
+                            </div>
+                            <div class="commit-message">feat: add real-time clock to DashboardPage for improved user experience</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed on Jun 22</p>
+                            </div>
+                        </div>
+
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">87edc6f</span>
+                                <span class="commit-date">Jun 19, 2026</span>
+                            </div>
+                            <div class="commit-message">feat: extend client management permissions to include HR role for create, update, and delete operations</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed on Jun 19</p>
+                            </div>
+                        </div>
+
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">6207b3d</span>
+                                <span class="commit-date">Jun 19, 2026</span>
+                            </div>
+                            <div class="commit-message">feat: extend project access to include HR role for improved permissions</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed on Jun 19</p>
+                            </div>
+                        </div>
+
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">558b8ee</span>
+                                <span class="commit-date">Jun 18, 2026</span>
+                            </div>
+                            <div class="commit-message">feat: enhance UsersPage to separate team and client users with improved UI</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed on Jun 18</p>
+                            </div>
+                        </div>
+
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">37699b3</span>
+                                <span class="commit-date">Jun 15, 2026</span>
+                            </div>
+                            <div class="commit-message">feat: extend admin role permissions to include HR for project deletion</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed on Jun 15</p>
+                            </div>
+                        </div>
+
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">b32e818</span>
+                                <span class="commit-date">Jun 15, 2026</span>
+                            </div>
+                            <div class="commit-message">feat: update task detail modals to support multiple assignees</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed on Jun 15</p>
+                            </div>
+                        </div>
+
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">34c7fb6</span>
+                                <span class="commit-date">Jun 15, 2026</span>
+                            </div>
+                            <div class="commit-message">feat: add multi-assignee support across task and content models with database updates</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed on Jun 15</p>
+                            </div>
+                        </div>
+
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">56b0ab4</span>
+                                <span class="commit-date">Jun 15, 2026</span>
+                            </div>
+                            <div class="commit-message">feat: add Google Drive link field to content and task forms for improved asset management</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed on Jun 15</p>
+                            </div>
+                        </div>
+
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">7482354</span>
+                                <span class="commit-date">Jun 15, 2026</span>
+                            </div>
+                            <div class="commit-message">feat: update industry labels across client and project forms for improved clarity and consistency</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed on Jun 15</p>
+                            </div>
+                        </div>
+
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">a7b3a64</span>
+                                <span class="commit-date">Jun 15, 2026</span>
+                            </div>
+                            <div class="commit-message">feat: enhance dark mode styles with global overrides and improved color contrast</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed on Jun 15</p>
+                            </div>
+                        </div>
+
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">e6e8c74</span>
+                                <span class="commit-date">Jun 11, 2026</span>
+                            </div>
+                            <div class="commit-message">fix: create new milestones table to resolve updated_at column corruption</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed on Jun 11</p>
+                            </div>
+                        </div>
+
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">8b3dc55</span>
+                                <span class="commit-date">Jun 11, 2026</span>
+                            </div>
+                            <div class="commit-message">feat: add favicon and apple touch icon links to index.html for improved branding</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed on Jun 11</p>
+                            </div>
+                        </div>
+
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">adc8b7d</span>
+                                <span class="commit-date">Jun 11, 2026</span>
+                            </div>
+                            <div class="commit-message">fix: update UsersPage layout and improve responsiveness</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed on Jun 11</p>
+                            </div>
+                        </div>
+
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">c52d501</span>
+                                <span class="commit-date">Jun 11, 2026</span>
+                            </div>
+                            <div class="commit-message">feat: migrate user roles to support multiple roles and update related logic</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed on Jun 11</p>
+                            </div>
+                        </div>
+
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">71f55d0</span>
+                                <span class="commit-date">Jun 11, 2026</span>
+                            </div>
+                            <div class="commit-message">feat: update user roles to include 'hr' for enhanced access control in AppLayout</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed on Jun 11</p>
+                            </div>
+                        </div>
+
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">ac1bb3e</span>
+                                <span class="commit-date">Jun 11, 2026</span>
+                            </div>
+                            <div class="commit-message">feat: update logo display across various components for improved visual consistency</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed on Jun 11</p>
+                            </div>
+                        </div>
+
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">27f27d6</span>
+                                <span class="commit-date">Jun 11, 2026</span>
+                            </div>
+                            <div class="commit-message">fix: restore Handoff navigation item for admin access in AppLayout</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed on Jun 11</p>
+                            </div>
+                        </div>
+
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">f9e4a9f</span>
+                                <span class="commit-date">Jun 11, 2026</span>
+                            </div>
+                            <div class="commit-message">Refactor code structure for improved readability and maintainability</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed on Jun 11</p>
+                            </div>
+                        </div>
+
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">d1a0839</span>
+                                <span class="commit-date">Jun 11, 2026</span>
+                            </div>
+                            <div class="commit-message">Refactor project management features</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed on Jun 11</p>
+                            </div>
+                        </div>
+
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">7540bb1</span>
+                                <span class="commit-date">Jun 11, 2026</span>
+                            </div>
+                            <div class="commit-message">feat: enhance project fetching with limit parameter and improve client selection logic in WorkflowBrowser</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed on Jun 11</p>
+                            </div>
+                        </div>
+
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">d56c046</span>
+                                <span class="commit-date">Jun 11, 2026</span>
+                            </div>
+                            <div class="commit-message">feat: update project categories to align with new workflow structure and migrate existing data</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed on Jun 11</p>
+                            </div>
+                        </div>
+
+                        <div class="commit-item">
+                            <div class="commit-header">
+                                <span class="commit-hash">b0e31e9</span>
+                                <span class="commit-date">Jun 11, 2026</span>
+                            </div>
+                            <div class="commit-message">feat: integrate WorkflowBrowser into GraphicDesignPage and WebDevPage for project context</div>
+                            <div class="commit-body">
+                                <p>AeroerMak committed on Jun 11</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Footer -->
+                <footer class="project-footer">
+                    <div class="project-links">
+                        <a href="https://starthink-crm.pages.dev" target="_blank" rel="noopener noreferrer" class="project-link">🌐 Live App</a>
+                        <a href="https://starthink-crm-api.starthinkmy.workers.dev" target="_blank" rel="noopener noreferrer" class="project-link">⚙️ Live API</a>
+                    </div>
+                    <a href="../index.html" class="back-link">← View All Projects</a>
+                </footer>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer" id="dynamic-footer">
+        <!-- Footer will be dynamically loaded -->
+    </footer>
+
+    <script src="../components.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>
